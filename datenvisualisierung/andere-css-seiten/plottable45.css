@@ -1,0 +1,15 @@
+#footer {
+  flex-wrap: wrap;
+  background-color: #e67e22;
+  color: #fff;
+  margin-top: 200px;
+  font-family: 'Roboto', cursive;
+  font-size: 1.3em;
+  padding-left: 650px;
+  padding-right: 550px;
+  /* margin-top: 400px; */
+  bottom: 0;
+
+  background-repeat: repeat;
+
+}

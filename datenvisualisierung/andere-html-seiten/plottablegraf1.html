@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <link rel="stylesheet" href="http://plottablejs.org/assets/lib/plottable.css" />
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable.css" />
+  <script src="http://plottablejs.org/assets/lib/d3.js"></script>
+  <script src="http://plottablejs.org/assets/lib/plottable.js"></script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable45.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory-plot">
+    <div id="canvas-container-plot1">
+
+      <h1 class="plot1">Temperaturverteilung nach Höhenmetern </h1>
+      <div>
+        <svg id="example" width="800" height="600" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+
+      <!--<script src="http://plottablejs.org/assets/lib/svgtypewriter.js"></script>-->
+
+
+      <script>
+        var data = [ //Temperatur in °C bei Höhe in m
+          {
+            "temp": 15,
+            "altitude": 0
+          },
+          {
+            "temp": -55,
+            "altitude": 12
+          },
+          {
+            "temp": -55,
+            "altitude": 20
+          },
+          {
+            "temp": -3,
+            "altitude": 50
+          },
+          {
+            "temp": -3,
+            "altitude": 55
+          },
+          {
+            "temp": -95,
+            "altitude": 80
+          },
+          {
+            "temp": -95,
+            "altitude": 90
+          },
+          {
+            "temp": -45,
+            "altitude": 100
+          }
+        ];
+
+        var bands = [ //Farbbänder mit Bezeichnung und Höhenangaben der Schichten der Erdatmosphäre
+          {
+            "name": "troposphere",
+            "low": -10,
+            "high": 12
+          },
+          {
+            "name": "tropopause",
+            "low": 12,
+            "high": 20
+          },
+          {
+            "name": "stratosphere",
+            "low": 20,
+            "high": 50
+          },
+          {
+            "name": "stratopause",
+            "low": 50,
+            "high": 55
+          },
+          {
+            "name": "mesosphere",
+            "low": 55,
+            "high": 80
+          },
+          {
+            "name": "mesopause",
+            "low": 80,
+            "high": 90
+          },
+          {
+            "name": "thermosphere",
+            "low": 90,
+            "high": 110
+          }
+        ];
+
+        var xScale = new Plottable.Scales.Linear(); //Zeichnen der x-Achsen-Skala
+        var yScale = new Plottable.Scales.Linear(); //Zeichnen der y-Achsen-Skala
+        xScale.domain([-100, 20]); // Bereich der x-Achse (unten)
+        yScale.domain([-10, 110]); // Bereich der y-Achse (links)
+
+        var interpolatedColorScale = new Plottable.Scales.InterpolatedColor();
+        interpolatedColorScale.range(["#E3F2FD", "#2196F3"]); // Bereich der Einfärbung von min. bis max.
+
+        var linePlot = new Plottable.Plots.Line()
+          .x(function (d) {
+            return d.temp;
+          }, xScale)
+          .y(function (d) {
+            return d.altitude;
+          }, yScale)
+          .attr("stroke-width", 3) // Linienstärke
+          .attr("stroke", "black") // Linie und Linienfarbe                      
+          .addDataset(new Plottable.Dataset(data));
+
+        var bandPlot = new Plottable.Plots.Rectangle()
+          .x(0)
+          .x2(function () {
+            return bandPlot.width();
+          })
+          .y(function (d) {
+            return d.low;
+          }, yScale)
+          .y2(function (d) {
+            return d.high;
+          })
+          .attr("fill", function (d) {
+            return d.low + d.high;
+          }, interpolatedColorScale)
+          .attr("stroke", function (d) {
+            return d.low + d.high;
+          }, interpolatedColorScale)
+          .addDataset(new Plottable.Dataset(bands));
+
+        var plots = new Plottable.Components.Group([bandPlot, linePlot]);
+
+        var xAxisCelsius = new Plottable.Axes.Numeric(xScale, "bottom"); // unten: Angaben in Grad Celsius
+        var xAxisFahrenheit = new Plottable.Axes.Numeric(xScale, "top") // oben: Angabe in Grad Fahrenheit
+          .formatter(function (d) {
+            return d * 9 / 5 + 32;
+          }); // Umrechnung in Fahrenheit
+        var yAxisKilometers = new Plottable.Axes.Numeric(yScale, "left"); // links: Höhe in Kilometern
+        var yAxisMiles = new Plottable.Axes.Numeric(yScale, "right") // links: Höhe in Meilen
+          .formatter(function (d) {
+            return String((d * 0.62137).toPrecision(2));
+          }); // Umrechnung in Meilen
+
+        var xLabelCelsius = new Plottable.Components.AxisLabel("Temperatur (\xB0C)",
+          "0"); //Beschriftungsausrichtung (0=hor,-90 bzw. 90=vert.)
+        var xLabelFahrenheit = new Plottable.Components.AxisLabel("Temperatur (\xB0F)", "0");
+        var yLabelKilometers = new Plottable.Components.AxisLabel("Höhe (km)", "0");
+        var yLabelMiles = new Plottable.Components.AxisLabel("Höhe (Meilen)", "0");
+
+        var table = new Plottable.Components.Table([
+          [null, null, xLabelFahrenheit, null, null],
+          [null, null, xAxisFahrenheit, null, null],
+          [yLabelKilometers, yAxisKilometers, plots, yAxisMiles, yLabelMiles],
+          [null, null, xAxisCelsius, null, null],
+          [null, null, xLabelCelsius, null, null]
+        ]);
+
+        table.renderTo(
+          "svg#example"); //Zum Abschluss wird ein SVG ausgegeben um die Grafik darzustellen --> hier als "table"
+      </script>
+    </div>
+
+  </section>
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

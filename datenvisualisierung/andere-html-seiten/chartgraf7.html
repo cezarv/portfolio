@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js">
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <style>
+    #canvas-container {
+      position: relative;
+      height: 60%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+  <!-- Quelle:
+https://de.statista.com/statistik/daten/studie/41068/umfrage/laendervergleich---erdgasverbrauch-in-milliarden-kubikmeter/ -->
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvascontainer">
+      <canvas id="my-polar-area-chart-7" width="900" height="400"></canvas>
+    </div>
+
+    <script>
+      const labels = ["USA", "Russland", "China", "Iran", "Japan", "Kanada"];
+      const volume = [817, 454, 283, 225, 115, 115]; // km3 * 10^3
+
+      Chart.defaults.global.elements.rectangle.borderWidth = 1;
+
+      const chartObj = {
+        labels: labels,
+        datasets: [{
+          label: "Volume",
+          data: volume,
+          borderWidth: 2,
+          backgroundColor: [
+            'hsla(260,100%,75%,.7',
+            'hsla(245,100%,75%,.7',
+            'hsla(230,100%,75%,.7',
+            'hsla(210,100%,75%,.7',
+            'hsla(195,100%,75%,.7',
+            'hsla(180,100%,75%,.7',
+            'hsla(165,100%,75%,.7'
+          ]
+        }]
+      }
+
+      new Chart("my-polar-area-chart-7", {
+        type: "polarArea",
+        data: chartObj,
+        options: {
+          title: {
+            display: true,
+            position: 'left',
+            fontSize: 25,
+            text: "Erdgasverbrauch weltweit nach einigen Ländern im Jahr 2018 (in Milliarden Kubikmeter)"
+          },
+          legend: {
+            position: 'right'
+          }
+        }
+      });
+    </script>
+  </section>
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,1971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://docbook.org/xml/5.1/rng/docbook.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<book xmlns="http://docbook.org/ns/docbook" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="5.1" xml:lang="de">
+    <title><emphasis role="bold">tutory</emphasis> Eine Schritt-für-Schritt-Anleitung<inlinemediaobject>
+        <imageobject>
+            <imagedata fileref="bilder/tutory_logo.png" format="png"/>
+        </imageobject>
+        </inlinemediaobject></title>
+    <info>
+        <author>
+            <orgname>Benjamin Mewes, Volodymyr Tsisar</orgname>
+        </author>
+        <address><city>Merseburg</city>
+            <street>Platz der Bausoldaten 2</street>
+            <postcode>06217</postcode>
+            <country>Deutschland</country>
+            <email>benjamin.mewes@stud.hs-merseburg.de</email> 
+            
+        </address>
+        
+     
+    </info>
+    
+    
+    <!-- Herzlich Willkommen! -->    
+    
+    <chapter>
+        <title>Herzlich Willkommen!</title>
+        <?oxy_insert_start author="Techred" timestamp="20200117T150418+0100"?>
+        <para>Hallo und herzlich willkommen bei diesem Tutorial von tutory! Schön, dass Sie uns
+            gefunden haben und dass wir gemeinsam Schritt für Schritt die Möglichkeiten erarbeiten,
+            die tutory bietet.</para>
+        <?oxy_insert_end?>
+        <section>
+            <title><?oxy_delete author="Techred" timestamp="20200117T150459+0100" content="Herzlich Willkommen!"?><?oxy_insert_start author="Techred" timestamp="20200117T150459+0100"?>Was
+                ist tutory?<?oxy_insert_end?></title>
+            <?oxy_delete author="Techred" timestamp="20200117T150428+0100" content="&lt;para&gt;&lt;emphasis role=&quot;bold&quot;&gt;Hallo und herzlich willkommen bei diesem Tutorial von tutory! Schön, dass Sie uns gefunden haben und dass wir gemeinsam Schritt für Schritt die Möglichkeiten erarbeiten, die tutory bietet.&lt;/emphasis&gt;&lt;/para&gt;&lt;para&gt;&lt;emphasis role=&quot;bold&quot;&gt;Was ist tutory?&lt;/emphasis&gt;&lt;/para&gt;"?>
+            <para>tutory ist mit und für Lehrende entwickelt worden. Das Programm soll Sie dabei
+                unterstützen, Arbeitsblätter innerhalb kürzester Zeit selbst zu gestalten. Schluss
+                mit ewigem Suchen nach geeigneten Bildern oder danach, wie bestimmte Inhalte
+                hervorgehoben werden sollen! Mit tutory formatieren Sie Ihre Arbeitsblätter intuitiv
+                und können Millionen von frei verfügbaren Bildern und Grafiken nutzen.</para>
+            <?oxy_delete author="Techred" timestamp="20200117T150625+0100" content="&lt;para&gt;&lt;emphasis role=&quot;bold&quot;/&gt;&lt;/para&gt;"?>
+        </section>
+        <section>
+            <title>Was ist das Ziel dieses Tutorials?</title>
+            <para>Mit diesem Tutorial soll Ihnen der Einstieg in das Programm erleichtert werden.
+                Wir gehen mit Ihnen gemeinsam die ersten wichtigen Schritte – von der Erstellung
+                eines Arbeitsblattes, dem Einfügen von Aufgaben und Grafiken bis hin zur Ausgabe des
+                Arbeitsblattes als PDF, sodass Sie es auch im Unterricht nutzen können. Ziel ist es,
+                ein Arbeitsblatt für das Fach Biologie in der Oberstufe zu erstellen, um an diesem
+                Beispiel zentrale Funktionen von tutory kennenzulernen.</para>
+        </section>
+        <section>
+            <title>Für wen ist dieses Tutorial gedacht?</title>
+            <para>Dieses Tutorial ist für alle geeignet, die gleich praxisorientiert in das Programm
+                einsteigen wollen. Dabei soll das Fach Biologie kein Hindernis sein. Da grundlegende
+                Funktionen, wie das Einfügen einer Überschrift oder das Erstellen einer Aufgabe
+                gezeigt werden, ist es für jedes Fach geeignet.</para>
+        </section>
+        <section>
+            <title>Noch eine wichtige Information:</title>
+            <para>Die Aufgaben, die wir im Tutorial gemeinsam erstellen werden, finden Sie auch auf
+                dem Arbeitsblatt, welches dem Übungspaket beiliegt, ebenso wie die verwendeten
+                sogenannten eigenen Bilder. Um die Aufgaben inhaltlich korrekt zu füllen, nutzen Sie
+                bitte parallel zum Tutorial das Arbeitsblatt.</para>
+        </section>
+        <section>
+            <title>So melden Sie sich bei tutory an:</title>
+            <para>Um tutory nutzen zu können, benötigen Sie ein Konto. Registrieren Sie sich dafür
+                auf der Startseite von tutory (www.tutory.de). Um mit diesem Tutorial zu starten und
+                sich mit tutory vertraut zu machen, können Sie die kostenlose Basisversion nutzen.
+                Mehr dazu erfahren Sie unter: https://www.tutory.de/preise.</para>
+        </section>
+    </chapter>
+    
+    <!-- Der Aufbau von tutory -->
+    <chapter>
+        <title>Einstieg in tutory</title>
+        <para>Hier ist die gesamte Benutzeroberfläche von tutory abgebildet mit den dazugehörigen
+            Abschnittsbeschreibungen.</para>
+    <section>
+    <title>Der Aufbau von tutory</title>    
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="bilder/aufbau.png" format="png"/>
+                </imageobject>
+                <textobject>
+                    <phrase>Aufbau von Tutory</phrase>
+                </textobject>
+                <caption>
+                    <para>Hier ist die gesamte Benutzeroberfläche von tutory abgebildet mit den dazugehörigen Abschnittsbeschreibungen.</para>
+                </caption>
+            </mediaobject>
+    </section>
+    
+    
+    <!-- Allgemeine Funktionen im Überblick -->
+    <section>
+        <title>Allgemeine Funktionen im Überblick</title>
+        <para>Um Ihnen die Bedienung von tutory zu erleichtern, stellen wir Ihnen auf dieser Seite Funktionen vor, die allgemein für Ihren
+            Arbeitsbereich gelten. Sie können nichts falsch machen. Probieren Sie es einfach aus, lernen Sie tutory kennen und verstehen.</para>
+        <para><emphasis role="bold">Drag and Drop (deutsch: Ziehen und Ablegen):</emphasis></para>
+        <para>Sie können Bausteine mithilfe von Drag and Drop auf
+            Ihrem Arbeitsblatt ablegen. Suchen Sie vorher in der linken
+            Menüleiste das entsprechende Menü aus. Wenn Sie den
+            gewünschten Baustein gefunden haben, klicken Sie mit
+            der linken Maustaste auf den Baustein, den Sie auf Ihrem
+            Arbeitsblatt platzieren wollen, und halten die Maustaste
+            gedrückt. Ziehen Sie den Baustein auf Ihr Arbeitsblatt und
+            platzieren Sie ihn, indem Sie die Maustaste wieder loslassen.</para>
+        
+        <para><emphasis role="bold">Vergrößern und Verkleinern von Bausteinen:</emphasis></para>
+        <para>Sie können die Größe der Bausteine beliebig verändern.
+            Hierzu wählen Sie den Baustein an und nutzen die
+            viereckigen Bearbeitungspunkte an den Rändern und Ecken
+            des Bausteins, indem Sie den gewünschten Punkt anklicken
+            und bei gedrückter Maustaste die Größe verändern. Ist die
+            gewünschte Größe erreicht, lassen Sie die Maustaste los.</para>
+        
+        <para><emphasis role="bold">Bearbeiten von Bausteinen:</emphasis></para>
+        <para> Sie haben zwei Möglichkeiten, um die Bearbeitungsleiste der Bausteine zu aktivieren:</para>
+        <procedure>
+            <step>
+                <para>
+                    Wählen Sie den Baustein an und klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" scale="20"/>
+                        </imageobject>
+                    </inlinemediaobject>.</para></step> 
+            <step><para>Führen Sie einen Doppelklick auf den Baustein
+                aus.</para></step>
+        </procedure>
+        
+        <para><emphasis role="bold">Löschen von Bausteinen:</emphasis></para>
+        <para>Auch hier haben Sie zwei Möglichkeiten, um die Bausteine
+            zu löschen:</para>
+            <procedure>
+                <step><para>Wählen Sie den Baustein an und klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" scale="20"></imagedata></imageobject></inlinemediaobject>.
+                </para></step>
+                <step><para>Klicken Sie in den Baustein und ziehen Sie ihn per Drag
+                    and Drop außerhalb des Arbeitsblattes.</para></step>
+            </procedure>
+        
+        <para><emphasis role="bold">Seiten anlegen:</emphasis></para>
+        
+        <para>Ihr Arbeitsblatt kann aus mehreren Seiten bestehen.
+            Um eine neue Seite anzulegen, klicken Sie unter
+            dem Ende des Arbeitsblattes auf Seite anlegen.</para>
+    </section>
+    </chapter>
+    
+    
+    <!--1. Erstellen eines Arbeitsblattes-->
+    <chapter>
+        <title>Tutorials</title>
+        <para>Hier lernen Sie anhand von Tutorialaufgaben, wie Sie in tutory verschiedene Aufgaben
+            lösen.</para>
+        
+        <section>
+        <title>Erstellen eines Arbeitsblattes</title>
+        <para>Wenn Sie sich erfolgreich bei tutory angemeldet haben, können
+            wir mit der Erstellung des Arbeitsblattes beginnen. Los geht's!</para>
+        
+        <procedure>
+            <step>
+                <para>Klicken Sie im rechten oberen Arbeitsbereich auf<emphasis role="bold"> Neues
+                            Privates Arbeitsblatt</emphasis>.</para>
+                <result>
+                    <para>Ein neues Eingabefenster erscheint.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/Julia1.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step>
+                <para>Geben Sie im Feld<emphasis role="bold"> Name</emphasis> "Biologie" als Titel
+                        für das Arbeitsblatt ein.</para>
+            </step>
+            
+            <step>
+                <para>Wählen Sie im Feld <emphasis role="bold">Fach</emphasis> "Biologie"
+                        aus.</para>
+                <result><para>Das ausgewählte Fach erscheint unter dem Feld.</para></result>
+            </step>
+            
+            <step>
+                <para>Wählen Sie im Feld<emphasis role="bold"> Klassenstufe</emphasis> "11"
+                        aus.</para>
+                <result>
+                    <para>Die Klassenstufe erscheint unter dem Feld.</para>
+                </result>
+            </step>
+            
+            <step>
+                <para>Klicken Sie auf<emphasis role="bold"> OK</emphasis>. </para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/2.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para></step>
+        </procedure>
+        <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="bilder/birne.png" scale="100"/>
+                    </imageobject>
+                </inlinemediaobject>Es sind mehrere Fächer und Klassenstufen auswählbar, die
+                beliebig gelöscht und hinzugefügt werden können.</para>
+    </section>
+    
+    
+    <!--2. Einfügen einer Überschrift-->
+    <section>
+        <title>Einfügen einer Überschrift</title>
+        <para>Super! Der erste Schritt ist getan. Nun beginnen wir, das
+            Arbeitsblatt zu gestalten und starten mit einer Überschrift.</para>
+        
+        <procedure>
+            <step>
+                <para>Klicken Sie in der linken Menüleiste auf <emphasis role="bold"
+                        >Text</emphasis>.</para>
+                <result><para>Ein Kontextmenü mit dazugehörigen Text-Bausteinen
+                    erscheint.</para>
+            </result>
+            </step>
+            
+            <step><para>Klicken Sie auf den Baustein<emphasis role="bold"> Überschrift</emphasis>.</para></step>
+        
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> rechts neben dem Baustein.</para>
+                <result><para>Auf dem Arbeitsblatt erscheint eine Überschrift.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/3.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+            </result>
+            </step>
+            
+            <step><para>Wählen Sie die Überschrift an und klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>.</para>
+                <result><para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste
+                    zum Bearbeiten des Bausteins.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/4.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Geben Sie in der Bearbeitungsleiste im Feld Text die
+                Überschrift "Das menschliche Auge" ein.</para>
+            </step>
+            
+            <step><para>Markieren Sie die Überschrift und klicken Sie auf. Ihre Überschrift ist nun fett
+                        formatiert.</para>
+                <result><para>
+                            <inlinemediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/birne.png" scale="20"/>
+                                </imageobject>
+                            </inlinemediaobject>. Sie können Ihre Überschrift außerdem durch Klick
+                            auf KURSIV kursiv formatieren.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/5.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para></result>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/haekchen.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>, um die Bearbeitung zu bestätigen und zu
+                        beenden.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/7.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Platzieren Sie die Überschrift per Drag and Drop am Anfang
+                des Arbeitsblattes.</para></step>
+        </procedure>
+    </section>
+    
+    
+    <!--3. Erstellen einer Aufgabe-->
+    <section>
+        <title>Erstellen einer Aufgabe</title>
+        <para>In diesem Kapitel lernen Sie die grundlegenden Schritte zur
+            Erstellung und Bearbeitung einer Aufgabenstellung kennen. Mit
+            diesem Baustein legen Sie die grundlegende Aufgabenstellung
+            und die dazugehörigen Teilaufgaben fest.</para>
+        
+        <procedure>
+            <step><para>Klicken Sie in der linken Menüleiste auf<emphasis role="bold"> Text</emphasis>.</para>
+                <result><para>Ein Kontextmenü mit dazugehörigen Text-Bausteinen
+                    erscheint.</para></result>
+            </step>
+            
+            <step><para>Klicken Sie auf den Baustein<emphasis role="bold"> Aufgabenstellung</emphasis>.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> rechts neben dem Baustein.</para>
+                <result><para>Auf dem Arbeitsblatt erscheint eine neue Aufgabe.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/cbcbcbsdsdsd.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para></result>
+            </step>
+            
+            <step><para>Wählen Sie die Aufgabe an und klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>.</para>
+                <result><para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste
+                    zum Bearbeiten des Bausteins.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/hfgbcvbcb.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Tragen Sie die Aufgabenstellung und die Teilaufgaben ein.
+                Nutzen Sie hierfür das fertige Arbeitsblatt als Vorlage.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/nmbf.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/haekchen.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>, um die Bearbeitung zu bestätigen und zu
+                        beenden.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/erweq.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para></step>
+        </procedure>
+        </section>
+    
+    
+    <!--4. Einfügen eines eigenen Bildes-->
+    <section>
+        <title>Einfügen eines eigenen Bildes</title>
+        <para>Um die erstellte Aufgabe zu vervollständigen, können Sie eigene
+            Bilder oder Bilder aus der tutory-Datenbank hinzufügen. Kapitel
+            10 geht näher auf die Datenbank-Alternative ein. In diesem
+            Kapitel lernen Sie, wie Sie Bilder von ihrer eigenen Festplatte auf
+            Ihrem Arbeitsblatt platzieren.</para>
+        
+        <procedure>
+            <step><para>Klicken Sie in der linken Menüleiste auf<emphasis role="bold"> Bild</emphasis>.</para>
+                <result><para>Ein Kontextmenü mit dazugehörigen Bild-Bausteinen
+                    erscheint.</para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie auf den Baustein<emphasis role="bold"> Eigenes Bild</emphasis>.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> rechts neben dem Baustein.</para>
+                <result><para>Auf dem Arbeitsblatt erscheint ein Platzhalter, in den Sie Ihr
+                    eigenes Bild einfügen können.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/dfd.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Wählen Sie den Platzhalter an und klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>.</para>
+                <result><para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste
+                    zum Bearbeiten des Bausteins.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/fdfdfdf.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie auf das Bearbeitungsfeld<emphasis role="bold">
+                Bild hier hochladen oder hineinziehen</emphasis>.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/dfdfrer.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Wählen Sie das gewünschte Bild im angezeigten Zielordner
+                aus.</para>
+                <result><para>Ihr ausgewähltes Bild erscheint auf dem Arbeitsblatt.</para>
+                </result>
+            </step>
+            
+            <step><para>Stellen Sie mit Hilfe des Schiebereglers die Größe des Bildes
+                ein.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/zuner.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Klicken sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>, um die Bearbeitung zu bestätigen und zu
+                        beenden.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/uniq.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Platzieren Sie das Bild unter der dazugehörigen Aufgabe.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/uni.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+        </procedure>
+    </section>
+    
+    
+    <!--5. Erstellen einer Tabelle-->
+    <section>
+        <title>Erstellen einer Tabelle</title>
+        <para>Gut gemacht! Weiter geht's – in diesem Kapitel lernen Sie, wie
+            Sie eine Tabelle erstellen, die sich schnell und einfach an Ihre
+            Vorstellungen anpassen lässt.</para>
+        
+        <procedure>
+            <step><para>Klicken Sie in der linken Menüleiste auf <emphasis role="bold">Text</emphasis>.</para>
+                <result><para>Ein Kontextmenü mit dazugehörigen Text-Bausteinen
+                    erscheint.</para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie auf den Baustein<emphasis role="bold"> Tabelle</emphasis>.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> rechts neben dem Baustein.</para>
+                <result><para>Auf dem Arbeitsblatt erscheint eine neue Tabelle.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/55.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Wählen Sie die Tabelle an und klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>.</para>
+                <result><para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste
+                    zum Bearbeiten des Bausteins.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/rtrrtzrz.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Löschen Sie zwei Spalten, indem Sie diese anwählen und auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Mülltonne.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> klicken.</para>
+            </step>
+            
+            <step><para>Fügen Sie sechs weitere Zeilen hinzu, indem Sie eine Zeile anwählen und auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/blaues Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> klicken.</para>
+                <result><para>Sie haben eine 2x10 Tabelle erstellt.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/tztz.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie in das Tabellenfeld, das Sie bearbeiten möchten,
+                und geben Sie Werte ein. Nutzen Sie hierfür das fertige
+                Arbeitsblatt als Vorlage.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/haekchen.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>, um die Bearbeitung zu bestätigen und zu
+                        beenden.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/umer.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+        </procedure>
+    </section>
+    
+    
+    <!--6. Erstellen eines Hinweises-->
+    <section>
+        <title>Erstellen eines Hinweises</title>
+        <para>Klasse! Wieder etwas Neues gelernt und direkt umgesetzt!
+            Nun machen wir weiter mit der Erstellung eines Hinweises. Im
+            Vergleich zu einem einfachen Text-Baustein ermöglicht Ihnen der
+            Hinweis-Baustein wichtige Informationen separat aufzuführen
+            und gezielt hervorzuheben.</para>
+        
+        <procedure>
+            <step><para>Klicken Sie in der linken Menüleiste auf<emphasis role="bold"> Text</emphasis>.</para>
+                <result><para>Ein Kontextmenü mit dazugehörigen Text-Bausteinen
+                    erscheint.</para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie auf den Baustein<emphasis role="bold"> Hinweis</emphasis>.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> rechts neben dem Baustein.</para>
+                <result><para>Auf dem Arbeitsblatt erscheint ein neuer Hinweis.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/zume.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Wählen Sie den Hinweis an und klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>.</para>
+                <result><para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste
+                    zum Bearbeiten des Bausteins.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/auge34.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Geben Sie den Titel im entsprechenden Feld ein. Nutzen Sie
+                hierfür das fertige Arbeitsblatt als Vorlage.</para>
+            </step>
+            
+            <step><para>Geben Sie den Inhalt im entsprechenden Feld ein. Nutzen
+                Sie hierfür das fertige Arbeitsblatt als Vorlage.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/aug56.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Setzen Sie vor und nach dem Inhaltstext jeweils ein "%".</para>
+                <result><para>Der Inhaltstext wird in der Farbe blau formatiert.</para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/haekchen.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>, um die Bearbeitung zu bestätigen und zu
+                        beenden.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/sdsds.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Platzieren Sie den Hinweis per Drag and Drop unter der
+                Tabelle.</para>
+            </step>
+        </procedure>
+    </section>
+    
+    
+    <!--7. Erstellen einer komplexen Aufgabe-->
+    <section>
+        <title>Erstellen einer komplexen Aufgabe</title>
+        <para>Super! Jetzt nutzen wir das Erlernte und erstellen so eine
+            weitere Aufgabe. Sie ist komplexer als die vorherigen, da sie viele
+            verschiedene Bausteine miteinander verbindet.</para>
+        
+        <procedure>
+            <step><para>Erstellen Sie eine Aufgabe wie in Kapitel 3 beschrieben.
+                Nutzen Sie hierfür das fertige Arbeitsblatt als Vorlage.</para>
+            </step>
+        
+            <step><para>Platzieren Sie den fertigen Baustein <emphasis role="bold">Aufgabe </emphasis>an den
+                Anfang des zweiten Arbeitsblattes.</para></step>
+            
+            <step><para>Klicken Sie in der linken Menüleiste auf<emphasis role="bold"> Text</emphasis>.</para>
+                <result><para>Ein Kontextmenü mit dazugehörigen Text-Bausteinen
+                    erscheint.</para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie auf den Baustein<emphasis role="bold"> Informationstext</emphasis>.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>rechts neben dem Baustein.</para>
+                <result><para>Auf dem Arbeitsblatt erscheint ein Informationstext.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/auge342.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Wählen Sie den Informationstext an und klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>.</para>
+                <result><para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste
+                    zum Bearbeiten des Bausteins.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/ahe345.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie in den Informationstext und löschen Sie den
+                Erklärungstext.</para>
+                <result><para><inlinemediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/birne.png" scale="20"/>
+                                </imageobject>
+                            </inlinemediaobject> Sie können den Text direkt in dem Feld auf dem
+                            Arbeitsblatt bearbeiten.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/zumar.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Geben Sie als Informationstext "Bezeichnung" ein.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>, um die Bearbeitung zu bestätigen und zu
+                        beenden.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/uhma.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para></step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/dupplizieren.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> am oberen Rand des Bausteins.</para>
+                <result><para>Der Baustein mit dem Text erscheint ein zweites Mal auf
+                    dem Arbeitsblatt.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/uahre.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Wiederholen Sie die Schritte 4-10 zweimal und geben Sie
+                als Informationstexte jeweils einmal "Beschreibung" und
+                "Korrektur" ein.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/auge33.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Duplizieren Sie die drei verschiedenen Informationstexte jeweils einmal, indem Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/dupplizieren.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> am oberen Rand des jeweiligen Bausteins klicken.</para>
+                <result><para>Alle drei Informationstexte erscheinen ein zweites Mal auf
+                    dem Arbeitsblatt.</para>
+                </result>
+            </step>
+            
+            <step><para>Fügen Sie die zwei Bilder aus Ihrem Zielordner gemäß
+                Kapitel 4 ein.</para>
+            </step>
+            
+            <step><para>Ordnen Sie Bilder und Texte per Drag and Drop auf dem
+                Arbeitsblatt an.</para>
+            </step>
+            
+            <step><para>Klicken Sie in der linken Menüleiste auf<emphasis role="bold"> Text</emphasis>.</para>
+                <result><para>Ein Kontextmenü mit dazugehörigen Text-Bausteinen
+                    erscheint.</para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie auf den Baustein<emphasis role="bold"> Linien mit Schrift</emphasis>.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> rechts neben dem Baustein.</para>
+                <result><para>Auf dem Arbeitsblatt erscheinen drei Linien, die nicht
+                    beschrieben sind.</para>
+                </result>
+            </step>
+            
+            <step><para>Ordnen Sie den Baustein unter dem Informationstext
+                "Beschreibung" über dem ersten Bild an.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/dupplizieren.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> und duplizieren Sie ihn zweimal.</para>
+                <result><para>Die Linien erscheinen zwei weitere Male auf dem
+                    Arbeitsblatt.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/aug3.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Platzieren Sie die Linien-Bausteine dem Screenshot
+                enstprechend unter den den Text-Bausteinen.</para>
+            </step>
+            
+            <step><para>Wiederholen Sie die Schritte 14-20, um die Linien für das
+                zweite Bild zu platzieren.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/das uage.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+        </procedure>
+    </section>
+    
+    
+    <!--8. Erstellen eines Lückentextes -->
+    <section>
+        <title>Erstellen eines Lückentextes</title>
+        <para>Das Arbeitsblatt füllt sich langsam. Beginnen wir nun mit
+            der Gestaltung der letzten Seite – mit dem Lückentext. Das
+            Besondere an diesem Baustein ist, dass Sie die Lücken manuell
+            erzeugen können, so wie Sie es für Ihren Text benötigen. Die
+            Anzahl sowie die Positionierung der Lücken definieren Sie selbst.</para>
+        
+        <procedure>
+            <step><para>Klicken Sie in der linken Menüleiste auf<emphasis role="bold"> Text</emphasis>.</para>
+                <result><para>Ein Kontextmenü mit dazugehörigen Text-Bausteinen
+                    erscheint.</para>
+                </result>
+            </step>
+            
+            <step><para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> den Baustein <emphasis role="bold"
+                            >Lückentext</emphasis>.</para>
+            </step>
+            
+            <step><para>Klicken Sie auf rechts neben dem Baustein.</para>
+                <result><para>Auf dem Arbeitsblatt erscheint die Bearbeitungsmaske für
+                    den Lückentext.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/unk.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Wählen Sie den Lückentext an und klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> .</para>
+                <result><para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste
+                    zum Bearbeiten des Bausteins.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/auge2.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            
+            <step><para>Geben Sie im Feld <emphasis role="bold">Aufgabe </emphasis>die Aufgabenstellung ein.
+                Nutzen Sie hierfür das fertige Arbeitsblatt als Vorlage.</para>
+            </step>
+            
+            <step><para>Geben Sie im Feld <emphasis role="bold">Text </emphasis>den Lückentext ein. Erstellen Sie
+                die Lücken , indem Sie die einzusetzenden Wörter in eckige
+                Klammern [Lücke] setzen.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/21.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Klicken Sie auf  <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/haekchen.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> , um die Bearbeitung zu bestätigen und zu
+                        beenden.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/akomr.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+            </step>
+            
+            <step><para>Platzieren Sie Ihren Lückentext per Drag and Drop am
+                Anfang des dritten Arbeitsblattes.</para>
+            </step>
+        </procedure>
+    </section>
+    
+    
+    <!--9. Erstellen einer Multiple-Choice-Aufgabe -->
+    <section>      
+        <title>Erstellen einer Multiple-Choice-Aufgabe</title>
+                <para>Bei dieser Übung erstellen und bearbeiten Sie eine Multiple-Choice-Aufgabe. In
+                    unserem Beispiel stehen drei Antwortmöglichkeiten zur Auswahl. Davon ist eine
+                    die Richtige.</para>
+                <procedure>
+                    <step>
+                        <para>Klicken Sie in der linken Menüleiste auf <emphasis role="bold">Komplex.</emphasis></para>
+                    </step>
+                    <step>
+                        <para>Klicken Sie auf <emphasis role="bold">Multiple-Choice.</emphasis></para>
+                    </step>
+                    <step>
+                        <para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>chenrechts neben dem Baustein.</para>
+                    <result>
+                        <para>Auf dem Arbeitsblatt erscheint die Multiple-Choice-Aufgabe.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/akom23.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                    </result>
+                    </step>
+                    <step>
+                        <para>Wählen Sie die Multiple-Choice-Aufgabe an und klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>.</para>
+                        <result>
+                            <para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste
+                                zum Bearbeiten des Bausteins.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/akom11.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                        </result>
+                    </step>
+                    <step>
+                        <para>Klicken Sie auf das Feld <emphasis role="bold">Aufgabentext
+                        </emphasis>und geben Sie den Text ein. Nutzen Sie hierfür das fertige
+                        Arbeitsblatt als Vorlage. </para></step>
+                    <step>
+                        <para>Vergeben Sie danach die Antwort-Möglichkeiten.</para>
+                    </step>
+                    <step>
+                        <para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/kreis.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> bei der dritten Antwort.</para>
+                        <result><para>Die dritte Antwort wurde als korrekt gekennzeichnet.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/akom2.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para></result>
+                    </step>
+                    <step>
+                        <para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/stift.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>, um die Bearbeitung zu bestätigen und zu beenden. </para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/akkomodation.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+                    </step>
+                </procedure>
+        <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="bilder/birne.png" scale="20"/>
+                    </imageobject>
+                </inlinemediaobject> Wenn Sie mit dem Mauszeiger über die Aufgabe fahren, erscheint
+                die dritte Antwort mit einem grünen Häkchen davor.</para>
+    </section>
+    
+    
+    <!-- 10. Einfügen eines Bildes aus der Bilddatenbank -->
+    <section>
+                <title>Einfügen eines Bildes aus der Bilddatenbank</title>
+                <para>Diese Übung zeigt, wie Sie Bilder in tutory suchen und auf ihrem
+                    Arbeitsblatt einfügen. tutory bringt eine eigene Datenbank mit,
+                    die bereits mit Bildern aus den verschiedensten Kategorien
+                    gefüllt ist. Diese stehen Ihnen frei zur Verfügung. Wie Sie Ihre
+                    eigenen Bilder nutzen können, haben Sie in Kapitel 4 erfahren.</para>
+                <procedure>
+                    <step>
+                        <para>Klicken Sie in der linken Menüleiste auf <emphasis role="bold">Bild.</emphasis></para>
+                    <result>
+                        <para>Ein Kontextmenü mit dazugehörigen Bild-Bausteinen erscheint.</para>
+                    </result>
+                    </step>
+                    <step>
+                        <para>Klicken Sie auf <emphasis role="bold">Suchbegriff</emphasis> und geben sie den Begriff
+                            „Auge“ in das Suchfeld ein.</para>
+                    </step>
+                    <step>
+                        <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/lupe.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject>.</para>
+                    <result>
+                        <para>Es erscheint eine Auswahl an Bildquellen in den Datenbanken.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/auge11.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                    </result>
+                    </step>
+                    <step>
+                        <para>Klicken Sie auf Pixabay Bild und ziehen Sie das gewünschte
+                            Bild per Drag and Drop in das Arbeitsblatt hinein.</para>
+                    </step>
+                    <step>
+                        <para>Wählen Sie das Bild an und klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject>.</para>
+                    <result>
+                        <para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste zum
+                            Bearbeiten des Bausteins.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/auge10.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                    </result>
+                    </step>
+                    <step>
+                        <para>Klicken Sie in das Feld <emphasis role="bold">Bilduntertitel</emphasis> und löschen Sie den
+                            Text.</para>
+                    </step>
+                    <step>
+                        <para>Stellen Sie mit Hilfe des Schiebereglers die Größe des Bildes
+                            ein.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/auge9.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+                    </step>
+                    <step>
+                        <para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/haekchen.png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>, um die Bearbeitung zu bestätigen und zu
+                        beenden.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/auge8.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+                    </step>
+                    <step>
+                        <para>Platzieren Sie das Bild neben der dazugehörigen Aufgabe.</para>
+                    </step>
+                </procedure>
+    </section>
+        
+        <!-- 11. Einfügen der Gesamtpunktzahl -->
+        <section>
+            <title>Einfügen der Gesamtpunktzahl</title>
+            <para>Bei dieser Übung lernen Sie, wie Sie die Gesamtpunktzahl 
+                einfügen können. Darauf aufbauend können Sie Punktzahlen für 
+                die einzelnen Aufgaben festlegen. Diese werden in 
+                der Gesamtpunktzahl automatisch zusammengerechnet. </para>
+            <procedure>
+                <step>
+                    <para>Klicken Sie in der linken Menüleiste auf <emphasis role="bold"
+                            >Struktur</emphasis>. </para>
+                    <result>
+                        <para>Ein Kontextmenü mit dazugehörigen Struktur-Bausteinen </para>
+                        <para>erscheint. </para>
+                    </result>
+                </step>
+                <step>
+                    <para>Klicken Sie auf <emphasis role="bold">Gesamtpunktzahl</emphasis>.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/auge7.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+                </step>
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/plus.png" format="png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>rechts neben dem Baustein.</para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/auge6.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+                </step>
+                <result>
+                    <para>Auf dem Arbeitsblatt erscheint die Gesamtpunktzahl.</para>
+                </result>
+            </procedure>
+                <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="bilder/birne.png" scale="20"/>
+                    </imageobject>
+                </inlinemediaobject> Im Feld Gesamtpunktzahl werden die erreichten und maximal
+                möglichen Punkte angezeigt.</para> 
+        </section>
+
+    
+    
+    <!-- 12. Einfügen der Punktzahlen -->
+    <section>
+        <title>Einfügen von Punktzahlen</title>
+        <para>Bei dieser Übung lernen Sie, wie Sie Punktzahlen für die 
+            verschiedenen Aufgaben festlegen können. Wie Sie den Baustein 
+            für die Note einfügen, erfahren Sie in den Übungsaufgaben (G.). </para>
+        <procedure>
+            <step>
+                <para> Wählen Sie den Baustein  <emphasis role="bold"
+                    > Aufgabenstellung</emphasis>  der ersten 
+                    Aufgabe an und klicken Sie auf <inlinemediaobject>
+                        <imageobject>
+                            <imagedata fileref="bilder/Stift.png" format="png" scale="20"/>
+                        </imageobject>
+                    </inlinemediaobject> </para>
+                <result>
+                    <para>Am rechten Bildschirmrand erscheint die Bearbeitungsleiste 
+                        zum Bearbeiten des Bausteins. </para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/auge5.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            <step>
+                <para>Klicken Sie neben <emphasis role="bold">Punkte</emphasis> auf  <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/graues Plus.png" format="png" scale="20"
+                                />
+                            </imageobject>
+                        </inlinemediaobject> und erhöhen Sie die Punktzahl auf zehn. </para>
+                <result>
+                    <para>Die Punktzahl erscheint im Baustein auf dem Arbeitsblatt.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/auge4.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+
+            <step>
+                <para>Vergeben Sie für alle übrigen Bausteine die Punktzahlen. 
+                    Nutzen Sie hierfür das fertige Arbeitsblatt als Vorlage.  </para>
+                <result>
+                    <para>Die Gesamtpunktzahl wird automatisch angepasst.</para>
+                </result>
+            </step>
+  
+        </procedure>
+        <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="bilder/birne.png" scale="20"/>
+                    </imageobject>
+                </inlinemediaobject> Alternativ können Sie die Punktzahl direkt in das Feld
+                eintragen.</para> 
+    </section>
+    
+    
+        <!-- 13.  Festlegen des Schwierigkeitsgrades -->
+    <section>
+        <title>Festlegen des Schwierigkeitsgrades</title>
+        <para>Um den Nutzern eine Orientierung für die Komplexität der 
+            Aufgaben zu geben, können Sie einen Schwierigkeitsgrad 
+            festlegen.</para>
+        <procedure>
+            <step>
+                <para> Wählen Sie den Baustein <emphasis role="bold">Aufgabenstellung</emphasis>der ersten 
+                    Aufgabe an und klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject> </para>
+                <result>
+                    <para>Am rechten Bildschirmrand öffnet sich die 
+                        Bearbeitungsleiste zum Bearbeiten des Bausteins. </para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/mensch auge 3.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+            <step>
+                <para> Klicken Sie neben dem <emphasis role="bold">Schwierigkeitsgrad </emphasis> auf <inlinemediaobject><imageobject><imagedata fileref="bilder/graues Plus.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject> erhöhen Sie den Schwierigkeitsgrad auf zwei.</para>
+                <result>
+                    <para>Am rechten Bildschirmrand öffnet sich die 
+                        Bearbeitungsleiste zum Bearbeiten des Bausteins. </para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/schw.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                </result>
+            </step>
+        </procedure>
+    </section>
+        
+        <!-- 14. Einfügen von Lizenzen -->
+        <section>
+            <title> Einfügen von Lizenzen</title>
+            <para>Hier erfahren Sie, wie eingefügte Bilder mit einer Lizenz versehen 
+                werden können. Dies ist erforderlich, um auch die Arbeitsblätter 
+                mit Bildern aus der tutory-Datenbank veröffentlichen zu können.  </para>
+            <procedure>
+                <step>
+                    <para>Klicken Sie in dem geöffneten Arbeitsblatt oben auf<inlinemediaobject><imageobject><imagedata fileref="bilder/cc.png" format="png" scale="25"></imagedata></imageobject></inlinemediaobject> </para>
+                    <result>
+                        <para>Ein neues Fenster öffnet sich. Dort sind die nicht lizenzierten 
+                            Bilder als Bausteine aufgelistet.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/mensch auge.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                    </result>
+                </step>
+                <step>
+                    <para>Klicken Sie in der Liste auf das erste Bild.</para>
+                    <result>
+                        <para>Auf der rechten Seite erscheint das ausgewählte Bild.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/ee.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                    </result>
+                </step>
+                <step>
+                    <para>  Wählen Sie im unteren Teil "Ein anderer" als Urheber des 
+                        Werkes aus. </para>
+                    <result>
+                        <para> Es erscheint eine neue Eingabemaske.</para>
+                    </result>
+                </step>
+                <step>
+                    <para>Geben Sie im Feld <emphasis role="bold"> Originaltitel</emphasis> "Titel nicht auffindbar" ein. </para>
+                </step>
+                <step>
+                    <para>Wählen Sie im Feld  <emphasis role="bold"> Lizenz des Werkes  </emphasis>  "BY-SA" aus.</para>
+                    <result>
+                        <para> Es erscheint ein weiteres Auswahlfeld.</para>
+                    </result>
+                </step>
+                <step>
+                    <para>Wählen Sie im Feld  <emphasis role="bold">Lizenzversion </emphasis>  "4.0" aus. </para>
+                </step>
+                <step>
+                    <para> Geben Sie im Feld   <emphasis role="bold">Name des Urhebers  </emphasis>  "Ernst Klett Verlag" 
+                        ein. </para>
+                    <result>
+                        <para> Es erscheint die Lizenz auf der rechten Seite.</para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/d.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                    </result>
+                </step>
+                <step>
+                    <para>Geben Sie im Feld<emphasis role="bold"> Link zum Inhalt</emphasis>
+                        folgenden Link ein: https://www2.klett.de/sixcms/media.php/229/04_043112.doc </para>
+                </step>
+                <step>
+                    <para>Klicken Sie auf  <emphasis role="bold">Speichern und Weiter</emphasis>, um die Lizenzen zu 
+                        speichern. </para>
+                    <para>
+                        <mediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/c.png" format="png"/>
+                            </imageobject>
+                        </mediaobject>
+                    </para>
+                </step>
+                <step>
+                    <para>Wiederholen Sie die Schritte 3 - 8 für die zwei weiteren 
+                        Bilder. </para>
+                </step>
+            </procedure>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="bilder/birne.png" scale="20"/>
+                    </imageobject>
+                </inlinemediaobject> Weiterführende Informationen erhalten Sie hier: <link
+                    xlink:href="https://www.tutory.de/leitfaden-oer"
+                    >https://www.tutory.de/leitfaden-oer</link>.</para> 
+        </section>
+        
+        
+        <!-- 15. Umwandeln eines Arbeitsblattes in ein PDF -->
+        <section>
+            <title>Umwandeln eines Arbeitsblattes in ein PDF </title>
+            <para>Herzlichen  Glückwünsch! Sie haben Ihr erstes Arbeitsblatt 
+                gestaltet. Um es ausdrucken oder anderweitig verteilen 
+                zu können, müssen Sie es nur noch als PDF-Dokument 
+                herunterladen. Sie können sowohl das Arbeitsblatt als auch das 
+                Lösungsblatt als PDF ausgeben.</para>
+            <procedure>
+                <step>
+                    <para> Klicken Sie auf den <emphasis role="bold">PDF</emphasis>-Button links
+                        oben in dem Arbeitsbereich.</para>
+                    <result>
+                        <para>Eine weitere Auswahlliste öffnet sich. </para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/bc.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                    </result>
+                </step>
+                <step>
+                    <para>Klicken Sie auf  <emphasis role="bold">Arbeitsblatt</emphasis>.</para>
+                    <result>
+                        <para>Das Arbeitsblatt wird als PDF-Dokument heruntergeladen.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Wiederholen Sie Schritt 1 und klicken Sie nun auf <emphasis role="bold"
+                        >  Lösungsblatt.</emphasis>.</para>
+                    <result>
+                        <para> Das Lösungsblatt zu Ihrem Arbeitsblatt wird 
+                            heruntergeladen. </para>
+                        <para>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="bilder/a.png" format="png"/>
+                                </imageobject>
+                            </mediaobject>
+                        </para>
+                    </result>
+                </step>
+                
+            </procedure>
+            <para><inlinemediaobject>
+                    <imageobject>
+                        <imagedata fileref="bilder/birne.png" scale="20"/>
+                    </imageobject>
+                </inlinemediaobject> Wenn Sie beim Herunterladen keinen separaten Ordner auswählen
+                können, in dem Sie das PDF- Dokument speichern, schauen Sie in Ihrem Download-Ordner
+                nach. Es ist möglich, dass das PDF-Dokument dort gespeichert wurde.</para> 
+        </section>       
+    </chapter>
+    
+    
+    
+    <!-- 17. Übungsaufgaben -->
+    
+    <chapter>
+        <title>Übungsaufgaben</title>
+        <para>
+            Sie haben gerade Ihr erstes Arbeitsblatt mit der Hilfe von tutory gestaltet – herzlichen Glückwunsch! Es war gar nicht so schwer, oder? Damit Sie 
+            noch ein wenig üben können, gibt es nun noch ein paar Aufgaben, die Sie selbstständig bearbeiten können. Keine Angst – auch hierfür stehen 
+            die Lösungen auf den nächsten Seiten bereit, falls Sie einmal nicht weiterkommen sollten. Die Übungsaufgaben selbst sind Erweiterungen oder 
+            Veränderungen der Aufgaben, die wir bereits zusammen erstellt haben. Wir wünschen viel Spaß beim Üben! 
+        </para>
+        
+        <section> 
+            <title>Aufgaben</title>
+         
+            <para><emphasis role="bold">Zu Aufgabe 1: </emphasis></para>
+             
+                 <para><emphasis role="bold"
+                     >  A. </emphasis>Erweitern Sie die Tabelle aus der ersten 
+                     Aufgabe um eine weitere Spalte. </para>
+             
+             
+                 <para><emphasis role="bold"
+                     > B.  </emphasis>Fügen Sie über den verschiedenen Linsentypen 
+                     den Baustein Begriffsdefinition ein und füllen Sie 
+                     ihn inhaltlich wie folgt: "Akkommodation beschreibt 
+                     die Fähigkeit des Auges, die Dicke der Augenlinse 
+                     zu verändern. Somit kann das Auge die Sehschärfe 
+                     aktiv an unterschiedliche Entfernungen anpassen."</para>
+             
+         
+            
+            
+            <para><emphasis role="bold">Zu Aufgabe 2: </emphasis></para>
+            
+                <para><emphasis role="bold"
+                    >  C.  </emphasis>Erhöhen Sie den Schwierigkeitsgrad der Aufgabe 1 von 
+                    zwei auf drei Sterne. </para>
+            
+           
+                <para><emphasis role="bold"
+                    > D.   </emphasis>Geben Sie den Zwischenüberschriften 
+                    "Bezeichnung", "Beschreibung" und  "Korrektur" 
+                    die Farbe Blau und unterstreichen Sie diese.</para>
+            
+            
+            
+            
+            <para><emphasis role="bold">Zu Aufgabe 3: </emphasis></para> 
+                
+                    <para><emphasis role="bold"
+                        > E.   </emphasis>Ändern Sie die Punktzahl der Aufgabe 
+                        Lückentext von 15 auf 30 Punkte. </para>
+                
+                
+                    <para><emphasis role="bold"
+                        > F.    </emphasis>Fügen Sie dem Lückentext noch eine Zeile 
+                        hinzu, die da lautet:  "Die Anpassung des Auges 
+                        [Akkomodation] an die Entfernung geschieht mit 
+                        Hilfe der [Augenlinse]. Durch die [Ziliarmuskeln] 
+                        wird die Krümmung der [Augenlinse] und damit die 
+                        [Brechkraft] des Linsensystems stufenlos verändert."</para>
+                
+            
+            
+            
+            <para>Am Ende des Arbeitsblattes:</para> 
+          
+                    <para><emphasis role="bold"> G.</emphasis> Fügen Sie neben der Gesamtpunktzahl am Ende des 
+                        Arbeitsblattes den Baustein Note ein. </para>
+               
+               
+                    <para><emphasis role="bold"
+                        > H. </emphasis>Fügen Sie neben der Note ein weiteres Bild 
+                        mit einem Daumen ein, der nach oben zeigt.</para>
+                
+            
+            
+       
+        </section> 
+        
+        <!-- 18. A. Einfügen einer zweiten Spalte -->
+        
+        <section>
+            <title>A. Einfügen einer zweiten Spalte</title>
+            <para>Wir wollen in der ersten Übung eine Tabelle um eine Spalte erweitern. In dieser zweiten Spalte sollen die Funktionen des menschlichen Auges 
+                eingetragen werden.</para>
+            <procedure>
+                <step>
+                    <para> Wählen Sie den Baustein <emphasis role="bold"
+                        >   Tabelle </emphasis>der ersten Aufgabe an.</para>
+                    <result>
+                        <para>Über dem Baustein erscheinen die Bearbeitungsfunktionen.</para>
+                    </result>
+                </step>
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject> am rechten oberen 
+                        Rand des Bausteins. Alternativ können Sie auch einen Doppelklick auf den Baustein selbst tätigen.</para>
+                    <result>
+                        <para> An den Seiten der Tabelle erscheinen die Bearbeitungssymbole für die Spalten und Zeilen.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie in die Spalte  <emphasis role="bold"
+                        >   Bezeichnung</emphasis>hinein. </para>
+                    <result>
+                        <para> Das Lösungsblatt zu Ihrem Arbeitsblatt wird 
+                            heruntergeladen. </para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf das rechte <inlinemediaobject><imageobject><imagedata fileref="bilder/blaues Plus.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject> am unteren Rand 
+                        der Tabelle, um eine weitere Spalte nach der ersten einzufügen.</para>
+                    <result>
+                        <para>Die zusätzliche Spalte erscheint.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Beschriften Sie die zusätzliche Spalte mit "Funktion". </para>
+                    
+                </step>
+                
+                
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/haekchen.png" format="png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> , um die Bearbeitung zu beenden. </para>
+                    <result>
+                        <para>Die zusätzliche Spalte erscheint.</para>
+                    </result>
+                </step>
+                
+            </procedure>
+         
+        </section>
+        
+        
+        
+        
+        <!-- 19. B. Einfügen einer Begriffsdefinition  -->
+        
+        <section>
+            <title>B. Einfügen einer Begriffsdefinition </title>
+            <para>Wie Sie bereits auf dem fertigen Arbeitsblatt gesehen haben, ist unter dem Hinweis über die verschiedenen Linsentypen noch etwas Platz auf 
+                dem Arbeitsblatt. Auf dieser freien Fläche fügen wir eine Begriffsdefinition ein.</para>
+            <procedure>
+                <step>
+                    <para> Klicken Sie dazu in der linken Menüleiste auf <emphasis role="bold"
+                        >   Text </emphasis>.</para>
+                    <result>
+                        <para>Ein Kontextmenü mit dazugehörigen Text-Bausteinen erscheint. </para>
+                    </result>
+                </step>
+                <step>
+                    <para>Ziehen Sie den Baustein <emphasis role="bold">Begriffsdefinition
+                        </emphasis> per Drag and Drop auf Ihr Arbeitsblatt unter den Hinweiskasten.
+                        Alternativ können Sie auch wieder das <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" format="png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> am rechten oberen neben dem Baustein verwenden.</para>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject>  am 
+                        rechten oberen Rand des Bausteins. Alternativ können Sie auch einen Doppelklick auf den Baustein selbst tätigen. </para>
+                    <result>
+                        <para> Die Bearbeitungsleiste öffnet sich. </para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Geben Sie in der Bearbeitungsleiste im Feld  <emphasis role="bold"
+                        >    Titel  </emphasis>"Akkommodation" ein.  </para>
+                </step>
+                <step>
+                    <para>Klicken Sie in den Baustein <emphasis role="bold"
+                        > Begriffsdefinition   </emphasis> und geben Sie folgende Definition direkt in dem Baustein ein: "Akkommodation beschreibt die 
+                        Fähigkeit des Auges, die Dicke der Augenlinse zu verändern. Somit kann das Auge die Sehschärfe aktiv an unterschiedliche Entfernungen anpassen." </para>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf  <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/haekchen.png" format="png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> , um die Bearbeitung zu beenden. </para>
+                </step>
+                
+                <step>
+                    <para>Vergrößern Sie den Baustein etwas, sodass er sich gut am Ende des Arbeitsblattes einfügt.</para>
+                </step>
+                
+            </procedure>
+            
+        </section>
+        
+        
+        <!-- 20. C. Ändern des Schwierigkeitsgrades   -->
+        
+        <section>
+            <title>C. Ändern des Schwierigkeitsgrades  </title>
+            <para>Bei dieser Übung wiederholen wir die Bearbeitung des Schwierigkeitsgrades und festigen damit unser Wissen. Wir wollen den 
+                Schwierigkeitsgrad der Aufgabe 1 von zwei auf drei Sterne erhöhen.</para>
+            <procedure>
+                <step>
+                    <para> Wählen Sie den Baustein <emphasis role="bold"
+                        >    Aufgabenstellung  </emphasis> der ersten Aufgabe an.</para>
+                    <result>
+                        <para>Über dem Baustein erscheinen die Bearbeitungsfunktionen.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject>  am rechten oberen Rand des Bausteins. 
+                        Alternativ können Sie auch einen Doppelklick auf den Baustein selbst tätigen.</para>
+                    <result>
+                        <para> Rechts öffnet sich die Bearbeitungsleiste.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf  <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/graues Plus.png" format="png" scale="20"
+                                />
+                            </imageobject>
+                        </inlinemediaobject> neben dem <emphasis role="bold"> Schwierigkeitsgrad
+                        </emphasis> und erhöhen Sie ihn auf drei. </para>
+                    <result>
+                        <para> Alle drei Sterne an der Aufgabe 1 sind nun schwarz gefärbt.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf  <inlinemediaobject><imageobject><imagedata fileref="bilder/haekchen.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject> , um die Bearbeitung zu beenden.  </para>
+                </step>
+    
+            </procedure>
+            
+        </section>
+        
+        
+        <!-- 21. D. Formatieren von Zwischenüberschriften  -->
+        
+        <section>
+            <title>D. Formatieren von Zwischenüberschriften </title>
+            <para> Diese Übung ist eine weiterführende Aufgabe zum Kapitel "Erstellen einer komplexen Aufgabe". Geben Sie den Zwischenüberschriften 
+                "Bezeichnung:", "Beschreibung:" und "Korrektur:" die Farbe Blau und unterstreichen Sie diese.</para>
+            <procedure>
+                <step>
+                    <para> Wählen Sie den Baustein  <emphasis role="bold"
+                        >     Informationstext </emphasis>  mit der Zwischenüberschrift "Bezeichnung" an.</para>
+                    <result>
+                        <para>Über dem Baustein erscheinen die Bearbeitungsfunktionen.</para>
+                    </result>
+                </step>
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject> am rechten oberen Rand des Bausteins.
+                        Alternativ können Sie auch einen Doppelklick auf den Baustein selbst tätigen.</para>
+                    <result>
+                        <para>Rechts öffnet sich die Bearbeitungsleiste.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Markieren Sie im Textfeld den Eintrag "Bezeichnung:". </para>
+                    <result>
+                        <para> Über dem Textfeld erscheinen die Bearbeitungsfunktionen.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/T.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject>und wählen Sie die Farbe Blau aus.</para>
+                    <result>
+                        <para> Vor und hinter der Zwischenüberschrift erscheint im Textfeld das Symbol %, welches für die Farbe Blau steht.</para>
+                        <para>Der Baustein Informationstext mit der Zwischenüberschrift "Bezeichnung:" erscheint in blauer Schrift auf dem Arbeitsblatt.</para>
+                    </result>
+                    
+                </step>
+                
+                
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/i.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject> . Alternativ können Sie mit dem Mauszeiger über das Textfeld in der Bearbeitungsleiste fahren. </para>
+                    <result>
+                        <para>  Sie sehen die verfügbaren Formatierungen für den Text von EDUMARK.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Geben Sie unter Inhalt einen Unterstrich vor und nach dem Text ein.</para>
+                    <result>
+                        <para>Die Zwischenüberschrift "Bezeichnung:" erscheint unterstrichen auf dem Arbeitsblatt. </para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/haekchen.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject>, um die Bearbeitung zu beenden. </para>
+                </step>
+                
+                <step>
+                    <para>Wiederholen Sie die Schritte 1. bis 7. für die Zwischenüberschriften "Beschreibung:" und "Korrektur:".</para>
+                </step>
+                
+            </procedure>
+            
+        </section>
+        
+        
+        
+        <!-- 22. E. Ändern der Punktzahl -->
+        
+        <section>
+            <title>E. Ändern der Punktzahl </title>
+            <para> In diesen Übungen wiederholen wir die Bearbeitung von Punktzahlen und erfahren, wie wir diese ändern können. Ändern Sie die Punktzahl der 
+                Aufgabe Lückentext von 15 auf 30 Punkte.</para>
+            <procedure>
+                <step>
+                    <para> Wählen Sie den Baustein <emphasis role="bold">Lückentext</emphasis>
+                        an.</para>
+                    <result>
+                        <para>Über dem Baustein erscheinen die Bearbeitungsfunktionen.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject> am rechten oberen Rand des Bausteins.
+                        Alternativ können Sie auch einen Doppelklick auf den Baustein selbst tätigen.</para>
+                    <result>
+                        <para>Rechts öffnet sich die Bearbeitungsleiste.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie bei Punkte in das Eingabefeld für die Punktzahl und tragen Sie "30" ein. Alternativ können Sie bei kleinen Schritten das <inlinemediaobject><imageobject><imagedata fileref="bilder/graues Plus.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject>
+                        anklicken bis die gewünschte Punktzahl angezeigt wird. </para>
+                    <result>
+                        <para>  Es erscheint die neue Punktzahl in der Aufgabe.</para>
+                    </result>
+                </step>
+  
+                <step>
+                    <para> Klicken Sie auf <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/haekchen.png" format="png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject>, um die Bearbeitung zu beenden. </para>
+                </step>
+                
+            </procedure>
+            
+        </section>
+        
+        
+        
+        <!-- 23. F. Einfügen von zusätzlichem Text in einen Lückentext -->
+        
+        <section>
+            <title>F. Einfügen von zusätzlichem Text in einen Lückentext</title>
+            <para> In dieser Übung erfahren Sie, wie man in einem bereits vorhandenen Lückentext weitere Sätze mit Lücken hinzufügt. Fügen Sie dem Lückentext 
+                noch Zeilen hinzu und ergänzen Sie in der Aufgabenstellung die fehlenden Wörter.</para>
+            <procedure>
+                <step>
+                    <para> Wählen Sie den Baustein <emphasis role="bold">Lückentext </emphasis>auf
+                        dem Arbeitsblatt an.</para>
+                    <result>
+                        <para>Über dem Baustein erscheinen die Bearbeitungsfunktionen.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/Stift.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject> am rechten oberen Rand des Bausteins.
+                        Alternativ können Sie auch einen Doppelklick auf den Baustein selbst tätigen.</para>
+                    <result>
+                        <para>Rechts öffnet sich die Bearbeitungsleiste.</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Klicken Sie in das Feld <emphasis role="bold">Text</emphasis> hinein, um
+                        den Textinhalt zu bearbeiten. </para> 
+                </step>
+                
+                <step>
+                    <para> Fügen Sie folgenden Satz hinzu:  "Die Anpassung des Auges (Akkomodation) an die Entfernung geschieht mit Hilfe der Augenlinse. Durch die 
+                        Ziliarmuskeln wird die Krümmung der Augenlinse und damit die Brechkraft des Linsensystems stufenlos verändert."</para>
+                </step>
+                
+                <step>
+                    <para> Setzen Sie die eckigen Klammern um die Wörter, die als Lücke dienen sollen: "[Lückentext]". Die Wörter lauten: Akkomodation, Augenlinse, Ziliarmuskel 
+                        und Brechkraft.</para>
+                    <result>
+                        <para> Es erscheint der neu hinzugefügte Textinhalt mit den ausgewiesenen Lücken. </para>
+                    </result>
+                </step>
+                <step>
+                    <para>  Klicken Sie auf <inlinemediaobject><imageobject><imagedata fileref="bilder/haekchen.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject>, um die Bearbeitung zu beenden.</para>
+                </step>
+                <step>
+                    <para> Ziehen Sie den Textrahmen auf dem Arbeitsblatt soweit nach unten bis der gesamte Text zu sehen ist.</para>
+                </step>
+            </procedure>
+            
+        </section>
+        
+        
+        <!-- 24. G. Einfügen einer Note -->
+        
+        <section>
+            <title>G. Einfügen einer Note</title>
+            <para> Bei dieser Übung fügen wir neben der Gesamtpunktzahl am Ende des Arbeitsblattes noch einen Baustein hinzu, in dem die Note eingetragen 
+                werden kann.</para>
+            <procedure>
+                <step>
+                    <para> Klicken Sie dazu in der linken Menüleiste auf  <emphasis role="bold"
+                        >     Struktur </emphasis>.</para>
+                    <result>
+                        <para> Ein Kontextmenü mit dazugehörigen Struktur-Bausteinen erscheint. </para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Ziehen Sie den Baustein <emphasis role="bold">Benotung </emphasis>per Drag
+                        and Drop auf Ihr Arbeitsblatt. Alternativ können Sie auch wieder das <inlinemediaobject>
+                            <imageobject>
+                                <imagedata fileref="bilder/Plus.png" format="png" scale="20"/>
+                            </imageobject>
+                        </inlinemediaobject> neben dem Baustein verwenden.</para>
+                </step>
+                <step>
+                    <para>Platzieren Sie den Baustein neben der Gesamtpunktzahl am Ende des Arbeitsblattes. </para> 
+                </step>
+            </procedure>
+            
+        </section>
+        
+        <!-- 25. H. Einfügen eines weiteren Bildes  -->
+        
+        <section>
+            <title>H. Einfügen eines weiteren Bildes </title>
+            <para> Zum Abschluss fügen wir ein Bild neben der Note ein, um das Arbeitsblatt abzurunden. Das Bild soll ein hochgestreckter Daumen sein. </para>
+            <procedure>
+                <step>
+                    <para> Klicken Sie dazu in der linken Menüleiste auf <emphasis role="bold"> Bild
+                        </emphasis>.</para>
+                    <result>
+                        <para> Ein Kontextmenü mit dazugehörigen Bild-Bausteinen erscheint. </para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para> Geben Sie im Suchfeld ganz oben den Begriff "Daumen" ein. Die Suche erfolgt automatisch – falls nicht, drücken Sie die Eingabe-Taste oder auf <inlinemediaobject><imageobject><imagedata fileref="bilder/lupe.png" format="png" scale="20"></imagedata></imageobject></inlinemediaobject>.</para>
+                    <result>
+                        <para>Als Suchergebnis erhalten Sie die Anzahl der gefundenen Bilder je Kategorie (Pixabay, etc.).</para>
+                    </result>
+                </step>
+                
+                <step>
+                    <para>Wählen Sie aus einer Kategorie ein Bild aus, das Ihren Wünschen entspricht.</para> 
+                </step>
+                <step>
+                    <para> Fügen Sie dieses per Drag and Drop neben der Note ein. </para> 
+                </step>
+                <step>
+                    <para>Verändern Sie die Größe des Bildes an den Skalierungspunkten bis es Ihnen gefällt. </para>                
+                </step>
+                <step>
+                    <para>Falls das eingefügte Bild über einen Untertitel verfügt, können Sie diesen löschen oder verändern wie in Kapitel 10 des Tutorials beschrieben.</para>                
+                </step>
+            </procedure>
+            
+        </section>
+        
+        
+        
+        
+    </chapter>
+  
+    
+    <!-- Impressum-Information -->
+    <chapter>
+        <title>Info</title>
+        <section>
+            <title>Impressum</title>
+            <para>Ein Projekt des Studiengangs Informationsdesign und Medienmanagement der Hochschule Merseburg</para>
+            <para>In Kooperation mit der Firma tutory Leipzig</para>
+            <para>© IDMM18 | 2019</para>
+            <para>Laura Wanninger</para>
+            <para>Julia Schumann</para>
+            <para>Saskia Junge</para>
+            <para>Benjamin Mewes</para>
+            <para>Volodymyr Tsisar</para>
+            <para>tutory UG (haftungsbeschränkt)
+                 Endersstr. 33
+                 04177 Leipzig</para>
+        </section>
+    </chapter>
+</book>

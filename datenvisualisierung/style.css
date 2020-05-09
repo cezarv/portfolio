@@ -1,0 +1,368 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #ececec;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+/* Style text auf der Hauptseite */
+
+/* #mainindex {
+    padding-top: 5em;
+    padding-left: 10em;
+    padding-right: 10em;
+    padding-bottom: 5em;
+    font-size: 1.5em;
+} */
+
+.box {
+    flex-direction: column transform: translate(-50%, -50%);
+    margin: auto;
+    width: 55%;
+    margin-bottom: 60px;
+    margin-top: 40px;
+    /* margin-bottom: 5em; */
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba (0, 0, 0, .5);
+    transition: .5;
+
+}
+
+.box:hover {
+    box-shadow: 0 15px 30px rgba (0, 0, 0, .5);
+}
+
+.box imgBx {
+    width: 150px;
+    height: 150px;
+
+    /* flex: 0 0 150px; */
+}
+
+.box .imgBx img {
+    max-width: 100%;
+    position: center;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.box .content {
+    padding: 10px;
+    /* margin-bottom: 2vp; */
+}
+
+.box .content h2 {
+    margin: 20px;
+    padding-left: 0;
+    color: #ff005c;
+    font-size: 1.5em
+}
+
+.box .content p {
+    margin: 0;
+    padding: auto;
+    text-align: justify;
+    font-size: 1.3em
+}
+
+.wrapper {
+    width: 100%;
+    margin-top: 300px;
+    margin: auto;
+    padding: 40px;
+    margin-bottom: 0px;
+}
+
+/* .box2 .box3 {
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 45%;
+    padding: 20px;
+    margin-bottom: 5em;
+    margin-top: 35em;
+    margin-bottom: -32em;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba (0, 0, 0, .5);
+    display: flex-end;
+    transition: .5;
+} */
+
+/* Style pfeil bei den Unterseiten  */
+
+
+p#pfeil {
+    background-color: #ececec !important;
+}
+
+#intro p {
+    font-size: 1.5em;
+
+}
+
+header {
+    background-color: #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    font-size: 1.4em;
+}
+
+header a:hover {
+    background-color: #f39c12;
+}
+
+
+header ul {
+    list-style-type: none;
+}
+
+#main-links ul {
+    display: flex;
+    font-size: 1.2em;
+}
+
+
+#logo {
+    font-size: 1.8em;
+    margin: 0 auto;
+    font-family: 'Poiret One', cursive;
+}
+
+
+
+#intro {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #8e9eab;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, rgba(238, 242, 243, 0.8), rgba(142, 158, 171, 1)),
+        url(img/1.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, rgba(238, 242, 243, 0.8), rgba(142, 158, 171, 1)),
+        url(img/1.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+
+}
+
+#intro p {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#intro h1 {
+    font-size: 3em;
+    padding: 20px;
+    font-family: 'Poiret One', cursive;
+}
+
+.cards-container {
+    flex-direction: row;
+    padding: 20px;
+    display: flex;
+
+}
+
+.card {
+    flex-basis: 200px;
+    flex-grow: .7;
+    max-width: 350px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, .2);
+}
+
+.card .card-img {
+    height: 200px;
+    overflow: hidden;
+    transform: scale(0.95);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
+    transition: transform 0.3s;
+}
+
+.card:hover .card-img {
+    transform: scale(1);
+}
+
+.card .card-img img {
+    height: 100%;
+    min-width: 100%;
+}
+
+.card .card-title {
+    padding: 10px;
+}
+
+.card .card-desc {
+    padding: 10px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+}
+
+.card .call-to-action {
+    margin: 10px;
+    margin-top: auto;
+    align-self: flex-start;
+
+}
+
+.card .call-to-action a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #3498db;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition-property: border, background-color, color;
+    transition-duration: 0.3s;
+}
+
+.card .call-to-action a:hover {
+    border: 2px solid #3498db;
+    background-color: transparent;
+    color: #3498db;
+
+}
+
+h2 {
+    font-size: 1.2em;
+    padding: auto;
+    margin: auto;
+    margin-top: 0;
+}
+
+#footer {
+    position: relative;
+    background-color: #e67e22;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Roboto', cursive;
+    font-size: 1.3em;
+    padding: auto;
+    /* margin-top: 400px; */
+    bottom: 0;
+    clear: both;
+    background-repeat: repeat;
+
+}
+
+@media screen and (max-width: 720px) {
+    header {
+        flex-direction: column;
+    }
+
+    #logo {
+        order: -1;
+    }
+
+
+    #intro h1 {
+        font-size: 1.5em;
+    }
+
+    #intro p {
+        width: 80%;
+    }
+
+    .box {
+        margin-top: 40em;
+        min-width: 29em;
+    }
+}
+
+/* visited page  */
+
+.current {
+    background-color: #d35400;
+}
+
+
+/* chart.js, canvas.js, plottable.js main story */
+
+/* Grafik1 */
+#mainstory {
+    min-height: 800px;
+    min-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ecf0f1;
+
+}
+
+#mainstory h1 {
+    font-size: 3em;
+    padding: 20px;
+    font-family: 'Roboto', cursive;
+}
+
+#canvas-containerchart {
+    position: relative;
+    height: 50%;
+    width: 50%;
+}
+
+
+/* Grafik 2 */
+
+.mainstory {
+    min-height: 800px;
+    min-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ecf0f1;
+
+}
+
+.mainstory h1 {
+    font-size: 3em;
+    padding: 10px;
+    font-family: 'Roboto', cursive;
+}
+
+.canvas-containerchart {
+    position: relative;
+    height: 50%;
+    width: 50%;
+}

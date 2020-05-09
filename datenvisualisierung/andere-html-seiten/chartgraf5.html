@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js">
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <style>
+    #canvascontainer {
+      position: relative;
+      height: 60%;
+      width: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+  <!-- Quelle: https://de.statista.com/statistik/daten/studie/1525/umfrage/durchschnittliche-fernsehdauer-pro-tag/ -->
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+
+    <div id="canvascontainer">
+      <canvas id="chart-6" width="800" height="300"></canvas>
+    </div>
+
+    <script>
+      // GISS Temperature anomalies from 1880 to 2016
+      const values2007 = [87, 133, 205, 275, 208];
+      const values2017 = [73, 105, 197, 316, 221];
+      const labels = [" 3 bis 13 Jahre", "14 bis 29 Jahre", "30 bis 49 Jahre", "50 Jahre und älter",
+        "Insgesamt (ab 3 Jahre)"
+      ];
+
+      const dataObj = {
+        labels: labels,
+        datasets: [{
+            label: '2007',
+            data: values2007,
+            borderColor: 'hsla(300,100%,50%,1)',
+            borderDash: [5, 5],
+
+          },
+          {
+            label: '2017',
+            data: values2017,
+            borderColor: 'hsla(200,100%,50%,1)'
+          }
+        ]
+      }
+
+      Chart.defaults.global.elements.line.fill = false;
+
+      const chartObj = {
+        type: "line",
+        data: dataObj,
+        options: {
+          maintainAspectRatio: false,
+        }
+      };
+      new Chart("chart-6", chartObj);
+    </script>
+  </section>
+  <h2>Durchschnittliche tägliche Fernsehdauer nach Altersgruppen in Deutschland in den Jahren 2007 und 2017 (in Minuten)
+  </h2>
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

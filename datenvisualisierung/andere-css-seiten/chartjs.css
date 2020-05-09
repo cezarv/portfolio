@@ -1,0 +1,25 @@
+.fa-long-arrow-left {
+  text-shadow: 1px 1px #333;
+  outline: none;
+  color: #e67e22;
+  margin-left: 20%;
+  height: 1em;
+  width: 1em;
+
+
+}
+
+.fa-long-arrow-left:hover {
+  color: #3498db;
+  background-color: #ececec;
+
+}
+
+#canvascontainer {
+  position: relative;
+  height: 80%;
+  width: 80%;
+}
+
+
+/* arrow 2 */

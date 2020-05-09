@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+
+  <script>
+    window.onload = function () {
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        zoomEnabled: true,
+        theme: "light3",
+        title: {
+          text: "Beschäftigung in der Landwirtschaft vs. landwirtschaftliche Flächen und Bevölkerung bei einigen Ländern"
+        },
+        axisX: {
+          title: "Beschäftigung in der Landwirtschaft",
+          suffix: "%",
+          minimum: 0,
+          maximum: 45,
+          gridThickness: 0.5
+        },
+        axisY: {
+          title: "Landwirtschaftliche Flächen (Millionen qkm)",
+          suffix: "mn"
+        },
+        data: [{
+          type: "bubble",
+          toolTipContent: "<b>{name}</b><br />Beschäftigung: {x}% <br /> landwirtschaftliche Flächen: {y}mn qkm<br /> Bevölkerung: {z}mn",
+          dataPoints: [{
+              x: 26.77,
+              y: 5.278,
+              z: 1387,
+              name: "China"
+            },
+            {
+              x: 43.86,
+              y: 1.79,
+              z: 1.296,
+              name: "Indien"
+            },
+            {
+              x: 1.42,
+              y: 4.058,
+              z: 329.256,
+              name: "USA"
+            },
+            {
+              x: 9.39,
+              y: 2.825,
+              z: 208.846,
+              name: "Brasilien"
+            },
+            {
+              x: 5.83,
+              y: 2.177,
+              z: 142.12,
+              name: "Russia"
+            },
+            {
+              x: 41.67,
+              y: 362.520,
+              z: 207.862,
+              name: "Pakistan"
+            },
+            {
+              x: 1.26,
+              y: 167.310,
+              z: 80.457,
+              name: "Germany"
+            }
+          ]
+        }]
+      });
+      chart.render();
+
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <p id="pfeil">
+    <a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html"><i
+        class="fa fa-long-arrow-left fa-5x"></i></a>
+  </p>
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container">
+
+      </canvas>
+
+    </div>
+    <div id="chartContainer" style="height: 770px; width: 920px; margin: 0px auto;"></div>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js">
+    </script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </wrapper>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js">
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <style>
+    #canvas-container {
+      position: relative;
+      height: 60%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+  <!-- Quelle: https://de.statista.com/statistik/daten/studie/35658/umfrage/laendervergleich-co2-emissionen-durch-verbrennung-von-treibstoffen/ -->
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvascontainer">
+      <canvas id="pie-chart" width="900" height="300"></canvas>
+    </div>
+
+    <script>
+      const dataset = [9102, 4833, 2077, 1439, 1147, 732, 589];
+      const labels = ["China (inkl. Hong Kong)", "USA", "Indien", "Russland", "Japan",
+        "Deutschland", "Korea"
+      ];
+      const colors = [];
+
+      dataset.forEach((entry, index) => {
+        colors.push('hsla(' + ((index + 5) * 50) + ',75%,75%,1)');
+      });
+
+      const dataObj = {
+        labels: labels,
+        datasets: [{
+          data: dataset,
+          backgroundColor: colors,
+          borderWidth: 3
+        }]
+      }
+
+      const chartObj = {
+        type: "pie",
+        data: dataObj,
+        options: {
+          pieceLabel: {
+            fontColor: '#000',
+            //precision: 0,
+            render: 'value',
+            textShadow: true,
+            //arc: true,
+            position: 'border'
+          },
+          title: {
+            text: "Energiebedingte CO2-Emissionen nach ausgewählten Ländern weltweit im Jahr 2016 (in Millionen Tonnen)",
+            display: true,
+            fontSize: 24
+          },
+          legend: {
+            labels: {
+              boxWidth: 20,
+            },
+            position: 'right'
+          }
+
+        }
+      };
+      new Chart("pie-chart", chartObj);
+    </script>
+  </section>
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

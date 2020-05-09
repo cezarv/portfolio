@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <link rel="stylesheet" href="http://plottablejs.org/assets/lib/plottable.css" />
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable.css" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable45.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container-plot6">
+      <h1>Bevölkerungsentwicklung in Merseburg</h1>
+      <div>
+        <svg id="example" width="800" height="600" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+
+      <!--<script src="http://plottablejs.org/assets/lib/svgtypewriter.js"></script>-->
+      <script src="http://plottablejs.org/assets/lib/d3.js"></script>
+      <script src="http://plottablejs.org/assets/lib/plottable.js"></script>
+
+      <script>
+        var xScale = new Plottable.Scales.Linear();
+        var yScale = new Plottable.Scales.Linear();
+
+        var xAxis = new Plottable.Axes.Numeric(xScale, "bottom"); //Zeichnen der x-Achsen-Skala
+        var yAxis = new Plottable.Axes.Numeric(yScale, "left"); //Zeichnen der y-Achsen-Skala 
+
+        var plot = new Plottable.Plots.Line();
+        plot.x(function (d) {
+          return d.x;
+        }, xScale);
+        plot.y(function (d) {
+          return d.y;
+        }, yScale);
+
+        var data = [{
+            "x": 1834,
+            "y": 8830
+          }, {
+            "x": 1875,
+            "y": 13664
+          }, {
+            "x": 1880,
+            "y": 15205
+          }, {
+            "x": 1890,
+            "y": 34197
+          }, {
+            "x": 1925,
+            "y": 25630
+          },
+          {
+            "x": 1933,
+            "y": 31576
+          }, {
+            "x": 1939,
+            "y": 38058
+          }, {
+            "x": 1946,
+            "y": 33978
+          }, {
+            "x": 1950,
+            "y": 38441
+          }, {
+            "x": 1960,
+            "y": 47199
+          },
+          {
+            "x": 1981,
+            "y": 50932
+          }, {
+            "x": 1984,
+            "y": 48399
+          }, {
+            "x": 1990,
+            "y": 43815
+          }, {
+            "x": 1995,
+            "y": 41576
+          }, {
+            "x": 2000,
+            "y": 37127
+          },
+          {
+            "x": 2005,
+            "y": 34581
+          }, {
+            "x": 2006,
+            "y": 34411
+          }, {
+            "x": 2007,
+            "y": 34039
+          }, {
+            "x": 2008,
+            "y": 34623
+          }, {
+            "x": 2009,
+            "y": 34313
+          },
+          {
+            "x": 2010,
+            "y": 35419
+          }, {
+            "x": 2012,
+            "y": 33520
+          }, {
+            "x": 2015,
+            "y": 34052
+          }, {
+            "x": 2016,
+            "y": 33931
+          }, {
+            "x": 2017,
+            "y": 34197
+          }
+        ]; // Quelle aus: https://de.wikipedia.org/wiki/Merseburg#Einwohnerentwicklung
+
+        var dataset = new Plottable.Dataset(data);
+        plot.addDataset(dataset);
+
+        var chart = new Plottable.Components.Table([
+          [yAxis, plot],
+          [null, xAxis]
+        ]);
+
+        chart.renderTo("svg#example");
+      </script>
+    </div>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

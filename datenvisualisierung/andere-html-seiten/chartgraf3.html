@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js">
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <style>
+    #mainstory {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      padding-left: 10%;
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+
+
+  <!-- Grafik 1  -->
+
+  <!-- Quelle: https://de.statista.com/statistik/daten/studie/454087/umfrage/katzen-in-europa-nach-laendern/ -->
+
+  <section id="mainstory">
+
+
+    <div class="container">
+      <canvas id="myChart" width="1000" height="800"></canvas>
+    </div>
+
+    <script>
+      let myChart = document.getElementById('myChart').getContext('2d');
+      // get context muss angegeben werden falls wir mit canvas arbeiten
+      // Globale Optionen
+      Chart.defaults.global.defaultFontFamily = 'Lato';
+      Chart.defaults.global.defaultFontSize = 15;
+      Chart.defaults.global.defaultFontColor = '#777';
+
+      let catEuropeChart = new Chart(myChart, {
+        type: 'bar', // bar , horiz bar, doughnut, radar .object catEuropeChart
+
+        data: {
+          labels: [
+            //labels her ist ein Array
+            // 'Länder',
+            'Russland',
+            'Deutschland',
+            'Frankreich',
+            'Vereinigtes Königreich',
+            'Italien',
+            'Polen'
+          ], // hier wir haben labels in einem Array / Datenfeld
+          datasets: [
+            //datasets her ist ein Array
+            {
+              label: 'Katzenzahl', //
+              data: [22500, 13700, 13500, 7900, 7480, 6100],
+              backgroundColor: [
+                'rgba(28, 2, 43,0.6)',
+                'rgba(123, 94, 123,0.6)',
+                'rgba(147, 130, 116,0.6)',
+                'rgba(233, 235, 135, 0.6)',
+                'rgba(185, 241, 140,0.6)',
+                'rgba(217, 247, 250, 0.6)'
+              ], // dataset ist auch ein Array / Datenfeld
+              borderWidth: 1, // Dichtheit bei der Ummantelung
+              borderColor: '#777', // Farbe Ummantelung der einzelnen Grafiken
+              hoverBorderWidth: 3,
+              hoverBorderColor: '#000'
+            }
+          ]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Katzen in Europa nach einigen Ländern 2017',
+            fontSize: 30,
+            responsive: true,
+          },
+          legend: {
+            position: 'right',
+            labels: {
+              fontColor: '#000'
+            }
+          }
+        },
+        layout: {
+          padding: {
+            left: 0,
+            right: 0,
+            bottom: 0,
+            top: 0
+          },
+
+
+        },
+        tooltips: {
+          enabled: false
+        }
+      });
+    </script>
+  </section>
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

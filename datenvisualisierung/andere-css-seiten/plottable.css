@@ -1,0 +1,64 @@
+#mainstory-plot {
+    display: flex;
+    padding-left: auto;
+    padding-right: auto;
+
+    align-content: center;
+    padding-bottom: 70px;
+}
+
+#canvas-container-plot1 h1 {
+    font-size: 2em;
+
+
+}
+
+#canvas-container-plot1 {
+
+    height: 80%;
+    width: 80%;
+    padding-left: 33vw
+}
+
+#canvas-container-plot3 {
+
+    height: 80%;
+    width: 80%;
+    padding-left: 18vw
+}
+
+#canvas-container-plot6 {
+
+    height: 80%;
+    width: 80%;
+    padding-left: 18vw
+}
+
+#canvas-container-plot4 {
+    display: flex;
+    height: 60%;
+    width: 80%;
+    margin: auto;
+    padding: auto;
+}
+
+#footer {
+    display: flex;
+    background-color: #e67e22;
+    color: #fff;
+    margin-top: 300px;
+    text-align: center;
+    font-family: 'Roboto', cursive;
+    font-size: 1.3em;
+    padding: auto;
+    /* margin-top: 400px; */
+    bottom: 0;
+    clear: both;
+    background-repeat: repeat;
+
+}
+
+#footer .footer5 {
+    margin-top: 200px;
+
+}

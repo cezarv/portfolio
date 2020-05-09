@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js">
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <style>
+    #canvas-container {
+      position: relative;
+      height: 80%;
+      width: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvascontainer">
+      <canvas id="Parteiennetz" width="400" height="400"></canvas>
+    </div>
+
+    <script>
+      // Quelle: https://de.statista.com/statistik/daten/studie/726002/umfrage/parteien-in-deutschland-nach-der-anzahl-der-fans-bei-facebook/ und https://de.statista.com/statistik/daten/studie/737753/umfrage/anzahl-der-besucher-von-webseiten-von-parteien-in-deutschland/
+      const labels = [
+        'AfD',
+        'DIE LINKE',
+        'Bündnis 90/ Die Grünen',
+        'SPD',
+        'CDU',
+        'FDP'
+      ];
+      const facebook = [235902, 119305, 112938, 187608, 136101, 121733]; // km2 * 10^3
+      const website = [464, 254, 195, 191, 186, 151];
+
+      const canvas = document.getElementById('Parteiennetz');
+      const ctx = canvas.getContext('2d');
+
+      const ch = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'website',
+            data: website,
+            borderWidth: 2,
+            backgroundColor: '#f1c40f',
+            borderColor: '#2980b9'
+          }]
+        },
+        options: {
+          maintainAspectRatio: false,
+          title: {
+            display: true,
+            text: [
+              'Parteien in Deutschland nach der Anzahl der Fans bei Facebook ',
+              'Anzahl in Tausend'
+            ],
+            fontFamily: 'Arial',
+            fontSize: 24
+          },
+          legend: {
+            display: false
+          }
+        }
+      });
+
+      canvas.addEventListener('click', toggle);
+
+      function toggle(event) {
+        if (ch.data.datasets[0].label == 'website') {
+          ch.data.datasets[0].data = facebook;
+          ch.data.datasets[0].label = 'facebook';
+          ch.data.datasets[0].borderColor = '#27ae60';
+          ch.data.datasets[0].backgroundColor = '#e74c3c';
+          ch.options.title.text = [
+            'Besucher der Webseiten ausgewählter Parteien in Deutschland',
+            'Anzahl der Besuche in Tausend'
+          ];
+        } else {
+          ch.data.datasets[0].data = website;
+          ch.data.datasets[0].label = 'website';
+          ch.data.datasets[0].backgroundColor = '#f1c40f';
+          ch.data.datasets[0].borderColor = '#2980b9';
+          ch.options.title.text = [
+            ' Parteien in Deutschland nach der Anzahl der Fans bei Facebook',
+            'Anzahl der Besuche in Tausend'
+          ];
+        }
+        ch.update();
+      }
+    </script>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

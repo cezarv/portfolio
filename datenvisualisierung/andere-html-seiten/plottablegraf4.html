@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <link rel="stylesheet" href="http://plottablejs.org/assets/lib/plottable.css" />
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable.css" />
+  <link rel="stylesheet" href="/plottable45.css" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable45.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container-plot4">
+
+      <h1>Altersstruktur in Deutschland (2019)</h1>
+      <div>
+        <svg id="example" width="800" height="600" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+
+      <!--<script src="http://plottablejs.org/assets/lib/svgtypewriter.js"></script>-->
+      <script src="http://plottablejs.org/assets/lib/d3.js"></script>
+      <script src="http://plottablejs.org/assets/lib/plottable.js"></script>
+
+      <script>
+        var symbolSize = 10;
+
+        var data = [{
+            ages: "0 - 10",
+            respondents: 727000
+          },
+          {
+            ages: "10 - 20",
+            respondents: 871000
+          },
+          {
+            ages: "20 - 30",
+            respondents: 1113000
+          },
+          {
+            ages: "30 - 40",
+            respondents: 1014000
+          },
+          {
+            ages: "40 - 50",
+            respondents: 1265000
+          },
+          {
+            ages: "50 - 60",
+            respondents: 1232000
+          },
+          {
+            ages: "60 - 70",
+            respondents: 899000
+          },
+          {
+            ages: "70 - 80",
+            respondents: 812000
+          }
+        ]; // Quelle: https://service.destatis.de/bevoelkerungspyramide/#!y=2019
+
+        var xScale = new Plottable.Scales.Category();
+        var yScale = new Plottable.Scales.Linear();
+
+        var xAxis = new Plottable.Axes.Category(xScale, "bottom");
+        var yAxis = new Plottable.Axes.Numeric(yScale, "left");
+
+        var linePlot = new Plottable.Plots.Line()
+          .addDataset(new Plottable.Dataset(data))
+          .x(function (d) {
+            return d.ages;
+          }, xScale)
+          .y(function (d) {
+            return d.respondents;
+          }, yScale)
+          .attr("stroke-width", 3)
+          .attr("stroke", "black")
+          .addDataset(new Plottable.Dataset(data));
+
+        var scatterPlot = new Plottable.Plots.Scatter()
+          .addDataset(new Plottable.Dataset(data))
+          .x(function (d) {
+            return d.ages;
+          }, xScale)
+          .y(function (d) {
+            return d.respondents;
+          }, yScale)
+          .attr("opacity", 1)
+          .attr("stroke-width", 3)
+          .attr("stroke", "black")
+          .size(symbolSize)
+          .addDataset(new Plottable.Dataset(data));
+
+        var bandPlot = new Plottable.Plots.Rectangle()
+          .x(function (d) {
+            return d.ages;
+          }, xScale)
+          .y(0)
+          .y2(function () {
+            return bandPlot.height();
+          })
+          .attr("fill", "white")
+          .attr("opacity", 0.3)
+          .addDataset(new Plottable.Dataset(data));
+
+        var interaction = new Plottable.Interactions.Pointer();
+        interaction.onPointerMove(function (point) {
+          bandPlot.entities().forEach(function (entity) {
+            entity.selection.attr("fill", "white");
+          });
+          var nearestEntity = bandPlot.entityNearest(point);
+          nearestEntity.selection.attr("fill", "#7cb5ec");
+          scatterPlot.size(function (datum) {
+            return datum.ages === nearestEntity.datum.ages ? symbolSize * 2 : symbolSize;
+          });
+        })
+        interaction.onPointerExit(function () {
+          bandPlot.entities().forEach(function (entity) {
+            entity.selection.attr("fill", "white");
+          });
+          scatterPlot.size(symbolSize);
+        });
+        interaction.attachTo(bandPlot);
+
+        var plots = new Plottable.Components.Group([bandPlot, linePlot, scatterPlot]);
+
+        var table = new Plottable.Components.Table([
+          [yAxis, plots],
+          [null, xAxis]
+        ]);
+
+        table.renderTo("svg#example");
+      </script>
+    </div>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

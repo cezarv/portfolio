@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <script>
+    window.onload = function () {
+
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title: {
+          text: "Höchster Preis je Stammaktie von Electronic Arts 2008-2009"
+        },
+        axisX: {
+          valueFormatString: "DD MMM",
+          crosshair: {
+            enabled: true,
+            snapToDataPoint: true
+          }
+        },
+        axisY: {
+          title: "in US-Dollar",
+          includeZero: false,
+          valueFormatString: "$##0.00",
+          crosshair: {
+            enabled: true,
+            snapToDataPoint: true,
+            labelFormatter: function (e) {
+              return "$" + CanvasJS.formatNumber(e.value, "##0.00");
+            }
+          }
+        },
+        data: [{
+          type: "area",
+          xValueFormatString: "DD MMM",
+          yValueFormatString: "$##0.00",
+          dataPoints: [{
+              x: new Date(2008, 01, 01),
+              y: 54.67
+            },
+            {
+              x: new Date(2008, 04, 01),
+              y: 57.08
+            },
+            {
+              x: new Date(2008, 07, 01),
+              y: 61.62
+            },
+            {
+              x: new Date(2008, 12, 01),
+              y: 58.88
+            },
+            {
+              x: new Date(2009, 01, 01),
+              y: 50.17
+            },
+            {
+              x: new Date(2009, 04, 01),
+              y: 39.56
+            },
+            {
+              x: new Date(2009, 07, 01),
+              y: 20.6
+            },
+            {
+              x: new Date(2009, 12, 01),
+              y: 23.76
+            },
+
+          ]
+        }]
+      });
+      chart.render();
+
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <p id="pfeil">
+    <a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html"><i
+        class="fa fa-long-arrow-left fa-5x"></i></a>
+  </p>
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container">
+
+      </canvas>
+
+    </div>
+    <div id="chartContainer" style="height: 500px; width: 920px; margin: 0px auto;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </wrapper>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

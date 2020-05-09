@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js">
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <p id="pfeil">
+    <a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html"><i class="fa fa-long-arrow-left fa-5x"></i></a>
+  </p>
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container">
+      <canvas id="Parteienpraesenz" width="900" height="500">
+      </canvas>
+
+    </div>
+    <script>
+      const labels = ["SPD", "CDU", "CSU",
+        "B90/Grüne", "FDP", "AfD",
+        "Die Linke", "Parteilos, Sonstige"
+      ];
+
+      const volumes = [366, 324, 124, 90, 60, 57, 48, 5];
+
+      const dataObj = {
+        labels: labels,
+        datasets: [{
+          label: "Partei im Fernsehen",
+          data: volumes,
+          borderWidth: 2,
+          backgroundColor: "#f1c40f",
+          borderColor: "#3498db",
+
+        }]
+      }
+      new Chart("Parteienpraesenz", {
+        type: "bar",
+        data: dataObj,
+        options: { // configure options here
+          maintainAspectRatio: true,
+          responsive: true,
+          legend: {
+            display: false
+          },
+          title: {
+            display: true,
+            text: [
+              'Parteienpräsenz in den TV-Nachrichten im Mai 2019 nach der Anzahl der Auftritte von Politikern'
+            ],
+            fontFamily: "Roboto",
+            fontSize: 24,
+            fontColor: '#95a5a6',
+            legend: {
+              display: false,
+            }
+          }
+        }
+      });
+    </script>
+    </wrapper>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

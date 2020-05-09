@@ -1,0 +1,21 @@
+.ui-content
+{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+div[data-role="navbar"] > ul > li
+{
+  width: 20% !important;
+  clear: none !important;
+}
+
+
+/* Media Queries */
+
+
+img {
+
+    max-width: 80%!important;
+}
+

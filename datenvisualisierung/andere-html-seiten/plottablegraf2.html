@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <link rel="stylesheet" href="http://plottablejs.org/assets/lib/plottable.css" />
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container">
+
+      <h1>Regionalliga Nordost </h1>
+      <div>
+        <svg id="example" width="800" height="600" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+
+      <!--<script src="http://plottablejs.org/assets/lib/svgtypewriter.js"></script>-->
+      <script src="http://plottablejs.org/assets/lib/d3.js"></script>
+      <script src="http://plottablejs.org/assets/lib/plottable.js"></script>
+
+      <script>
+        var data = [
+          [{
+              name: "1. FC Union Berlin",
+              year: "1994/1995",
+              rank: 3
+            },
+            {
+              name: "1. FC Union Berlin",
+              year: "1995/1996",
+              rank: 2
+            },
+            {
+              name: "1. FC Union Berlin",
+              year: "1996/1997",
+              rank: 5
+            },
+            {
+              name: "1. FC Union Berlin",
+              year: "1997/1998",
+              rank: 6
+            },
+            {
+              name: "1. FC Union Berlin",
+              year: "1998/1999",
+              rank: 6
+            },
+            {
+              name: "1. FC Union Berlin",
+              year: "1999/2000",
+              rank: 1
+            },
+          ],
+          [{
+              name: "FC Erzgebirge Aue",
+              year: "1994/1995",
+              rank: 9
+            },
+            {
+              name: "FC Erzgebirge Aue",
+              year: "1995/1996",
+              rank: 5
+            },
+            {
+              name: "FC Erzgebirge Aue",
+              year: "1996/1997",
+              rank: 2
+            },
+            {
+              name: "FC Erzgebirge Aue",
+              year: "1997/1998",
+              rank: 7
+            },
+            {
+              name: "FC Erzgebirge Aue",
+              year: "1998/1999",
+              rank: 7
+            },
+            {
+              name: "FC Erzgebirge Aue",
+              year: "1999/2000",
+              rank: 3
+            },
+          ],
+          [{
+              name: "FC Rot-Weiß Erfurt",
+              year: "1994/1995",
+              rank: 5
+            },
+            {
+              name: "FC Rot-Weiß Erfurt",
+              year: "1995/1996",
+              rank: 7
+            },
+            {
+              name: "FC Rot-Weiß Erfurt",
+              year: "1996/1997",
+              rank: 3
+            },
+            {
+              name: "FC Rot-Weiß Erfurt",
+              year: "1997/1998",
+              rank: 5
+            },
+            {
+              name: "FC Rot-Weiß Erfurt",
+              year: "1998/1999",
+              rank: 10
+            },
+            {
+              name: "FC Rot-Weiß Erfurt",
+              year: "1999/2000",
+              rank: 7
+            },
+          ],
+          [{
+              name: "FSV Lok Altmark Stendal",
+              year: "1994/1995",
+              rank: 15
+            },
+            {
+              name: "FSV Lok Altmark Stendal",
+              year: "1995/1996",
+              rank: 8
+            },
+            {
+              name: "FSV Lok Altmark Stendal",
+              year: "1996/1997",
+              rank: 11
+            },
+            {
+              name: "FSV Lok Altmark Stendal",
+              year: "1997/1998",
+              rank: 9
+            },
+            {
+              name: "FSV Lok Altmark Stendal",
+              year: "1998/1999",
+              rank: 12
+            },
+            {
+              name: "FSV Lok Altmark Stendal",
+              year: "1999/2000",
+              rank: 16
+            },
+          ]
+        ];
+
+        var xScale = new Plottable.Scales.Category();
+        var yScale = new Plottable.Scales.Linear();
+        // Making sure 1 is on top and 4 is on the bottom and adding some padding
+        yScale.domain([18.5, 0.125]);
+        // Making sure the ticks are integer numbers
+        yScale.tickGenerator(Plottable.Scales.TickGenerators.integerTickGenerator());
+
+        var colorScale = new Plottable.Scales.Color();
+        colorScale.domain(["1. FC Union Berlin", "FC Erzgebirge Aue", "FC Rot-Weiß Erfurt", "FSV Lok Altmark Stendal"]);
+
+        var legend = new Plottable.Components.Legend(colorScale);
+        legend.maxEntriesPerRow(Infinity);
+
+        var linePlot = new Plottable.Plots.Line()
+          .x(function (d) {
+            return d.year;
+          }, xScale)
+          .y(function (d) {
+            return d.rank;
+          }, yScale)
+          .attr("stroke-width", 2)
+          .attr("stroke", function (d) {
+            return d.name;
+          }, colorScale);
+
+        var scatterPlot = new Plottable.Plots.Scatter()
+          .x(function (d) {
+            return d.year;
+          }, xScale)
+          .y(function (d) {
+            return d.rank;
+          }, yScale)
+          .attr("stroke-width", 0)
+          .size(25)
+          .attr("stroke", function (d) {
+            return d.name;
+          }, colorScale)
+          .attr("fill", function (d) {
+            return d.name;
+          }, colorScale)
+          .attr("opacity", 1);
+
+        data.forEach(function (d) {
+          var dataSet = new Plottable.Dataset(d, {
+            name: d[0].name
+          });
+          linePlot.addDataset(dataSet);
+          scatterPlot.addDataset(dataSet);
+        });
+
+        var plots = new Plottable.Components.Group([linePlot, scatterPlot]);
+
+        var xAxis = new Plottable.Axes.Category(xScale, "bottom");
+        var yAxis = new Plottable.Axes.Numeric(yScale, "left");
+
+        var table = new Plottable.Components.Table([
+          [null, legend],
+          [yAxis, plots],
+          [null, xAxis]
+        ]);
+
+        table.renderTo("svg#example");
+
+        var adjustOpacity = function (plot, legendText) {
+          plot.attr("opacity", function (d, i, ds) {
+            return ds.metadata().name == legendText ? 1 : .2;
+          });
+        }
+
+        new Plottable.Interactions.Click()
+          .attachTo(legend)
+          .onClick(function (p) {
+            if (legend.entitiesAt(p)[0] !== undefined) {
+              var selected = legend.entitiesAt(p)[0].datum;
+              adjustOpacity(scatterPlot, selected);
+              adjustOpacity(linePlot, selected);
+            }
+          });
+
+        new Plottable.Interactions.Click()
+          .attachTo(plots)
+          .onClick(function () {
+            scatterPlot.attr("opacity", 1);
+            linePlot.attr("opacity", 1);
+          });
+      </script>
+      </wrapper>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <script>
+    window.onload = function () {
+
+      var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light2", // "light1", "light2", "dark1", "dark2"
+        exportEnabled: true,
+        animationEnabled: true,
+        title: {
+          text: "Umfrage in Deutschland zu Marken privat genutzter Laptops 2018 in %"
+        },
+        data: [{
+          type: "pie",
+          startAngle: 15,
+          toolTipContent: "<b>{label}</b>: {y}%",
+          showInLegend: "true",
+          legendText: "{label}",
+          indexLabelFontSize: 16,
+          indexLabel: "{label} - {y}%",
+          dataPoints: [{
+              y: 18,
+              label: "Acer"
+            },
+            {
+              y: 16,
+              label: "Lenovo"
+            },
+            {
+              y: 16,
+              label: "HP"
+            },
+            {
+              y: 9,
+              label: "Asus"
+            },
+            {
+              y: 7,
+              label: "Toshiba"
+            }
+          ]
+        }]
+      });
+      chart.render();
+
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <p id="pfeil">
+    <a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html"><i
+        class="fa fa-long-arrow-left fa-5x"></i></a>
+  </p>
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container">
+
+      </canvas>
+
+    </div>
+    <div id="chartContainer" style="height: 700px; width: 920px; margin: 0px auto; padding: 0 auto;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </wrapper>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

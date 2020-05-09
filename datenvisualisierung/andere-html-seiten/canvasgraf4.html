@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <script>
+    window.onload = function () {
+
+      var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        title: {
+          text: "Durchschnittlicher Verkaufspreis von Smartphones weltweit bis 2018"
+        },
+        axisY: {
+          title: "Verkaufspreis in US-Dollar",
+          valueFormatString: "$##0.00",
+          suffix: "",
+          stripLines: [{
+            value: 350,
+            label: "Durchschnitt"
+          }]
+        },
+        data: [{
+          yValueFormatString: "Verkaufspreis in US-Dollar",
+          xValueFormatString: "YYYY",
+          type: "spline",
+          dataPoints: [{
+              x: new Date(2007, 0),
+              y: 359
+            },
+            {
+              x: new Date(2008, 0),
+              y: 366
+            },
+            {
+              x: new Date(2009, 0),
+              y: 359
+            },
+            {
+              x: new Date(2010, 0),
+              y: 363
+            },
+            {
+              x: new Date(2011, 0),
+              y: 361
+            },
+            {
+              x: new Date(2012, 0),
+              y: 328
+            },
+            {
+              x: new Date(2013, 0),
+              y: 284
+            },
+            {
+              x: new Date(2014, 0),
+              y: 257
+            },
+            {
+              x: new Date(2015, 0),
+              y: 252
+            },
+            {
+              x: new Date(2016, 0),
+              y: 281
+            },
+            {
+              x: new Date(2017, 0),
+              y: 313
+            },
+            {
+              x: new Date(2018, 0),
+              y: 345
+            },
+
+          ]
+        }]
+      });
+      chart.render();
+
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <p id="pfeil">
+    <a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html"><i
+        class="fa fa-long-arrow-left fa-5x"></i></a>
+  </p>
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container">
+
+      </canvas>
+
+    </div>
+    <div id="chartContainer" style="height: 570px; width: 920px; margin: 0px auto;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </wrapper>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

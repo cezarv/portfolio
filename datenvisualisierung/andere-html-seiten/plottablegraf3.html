@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <link rel="stylesheet" href="http://plottablejs.org/assets/lib/plottable.css" />
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable.css" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable45.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container-plot3">
+
+      <h1>Kalenderübersicht</h1>
+      <div>
+        <svg id="example" width="800" height="600" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+
+      <!--<script src="http://plottablejs.org/assets/lib/svgtypewriter.js"></script>-->
+      <script src="http://plottablejs.org/assets/lib/d3.js"></script>
+      <script src="http://plottablejs.org/assets/lib/plottable.js"></script>
+
+      <script>
+        var data = [];
+        for (var i = 1; i < 200; i++) {
+          data.push({
+            date: new Date(2019, 0, i),
+            val: 1.5 * Math.random() - 0.5
+          });
+        }
+
+        var daysOfWeek = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
+        var months = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul"];
+
+        // Gets the date of the top left square in the calendar, i.e. the first Sunday on / before Jan 1
+        function getFirstDisplayableMonday(date) {
+          return new Date(
+            date.getFullYear(),
+            0,
+            1 - new Date(date.getFullYear(), 0, 1).getDay()
+          );
+        }
+
+        function getWeekOfTheYear(date) {
+          var firstMonday = getFirstDisplayableMonday(date);
+          var diff = date - firstMonday;
+          var oneDay = 1000 * 60 * 60 * 24;
+          return Math.floor(Math.ceil(diff / oneDay) / 7);
+        }
+
+        function monthFormatter() {
+          return function (yearAndWeek) {
+            var year = yearAndWeek[0];
+            var week = yearAndWeek[1];
+            var startOfWeek = new Date(year, 0, (week + 1) * 7 - new Date(year, 0, 1).getDay());
+            if (startOfWeek.getDate() > 7) {
+              return "";
+            }
+            return months[startOfWeek.getMonth()];
+          }
+        }
+
+        var xScale = new Plottable.Scales.Category();
+        var yScale = new Plottable.Scales.Category();
+        yScale.domain(daysOfWeek);
+
+        var xAxis = new Plottable.Axes.Category(xScale, "bottom");
+        var yAxis = new Plottable.Axes.Category(yScale, "left");
+        xAxis.formatter(monthFormatter());
+
+        var colorScale = new Plottable.Scales.InterpolatedColor();
+        colorScale.domain([0, 1]);
+        colorScale.range(["#eee", "#d6e685", "#8cc665", "#44a340", "#1e6823"]);
+
+        var plot = new Plottable.Plots.Rectangle()
+          .addDataset(new Plottable.Dataset(data))
+          .x(function (d) {
+            return [d.date.getFullYear(), getWeekOfTheYear(d.date)]
+          }, xScale)
+          .y(function (d) {
+            return daysOfWeek[d.date.getDay()]
+          }, yScale)
+          .attr("fill", function (d) {
+            return d.val;
+          }, colorScale)
+          .attr("stroke", "#fff")
+          .attr("stroke-width", 0);
+
+        var plotHighlighter = new Plottable.Plots.Rectangle()
+          .addDataset(new Plottable.Dataset(data))
+          .x(function (d) {
+            return [d.date.getFullYear(), getWeekOfTheYear(d.date)]
+          }, xScale)
+          .y(function (d) {
+            return daysOfWeek[d.date.getDay()]
+          }, yScale)
+          .attr("fill", "black")
+          .attr("fill-opacity", 0);
+
+        var group = new Plottable.Components.Group([plot, plotHighlighter]);
+
+        var interaction = new Plottable.Interactions.Pointer();
+        interaction.onPointerMove(function (p) {
+          var nearestEntity = plotHighlighter.entityNearest(p);
+          var hoveredMonth = nearestEntity.datum.date.getMonth();
+          plotHighlighter.entities().forEach(function (entity) {
+            var date = entity.datum.date;
+            entity.selection.attr("fill-opacity", date.getMonth() === hoveredMonth ? 0.5 : 0);
+          });
+        })
+        interaction.onPointerExit(function () {
+          plotHighlighter.entities().forEach(function (entity) {
+            entity.selection.attr("fill-opacity", 0);
+          });
+        })
+        interaction.attachTo(plot);
+
+        var table = new Plottable.Components.Table([
+          [yAxis, group],
+          [null, xAxis]
+        ]);
+
+        table.renderTo("svg#example");
+      </script>
+    </div>
+  </section>
+
+
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

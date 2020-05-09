@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js">
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <style>
+    #canvas-container {
+      position: relative;
+      height: 60%;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvascontainer">
+      <canvas id="chart-4" width="900" height="300"></canvas>
+    </div>
+
+    <h2>Anzahl der Filialen der Aldi-Gruppe in Deutschland in den Jahren 2007 bis 2017</h2>
+    <script>
+      //  https://de.statista.com/statistik/daten/studie/240763/umfrage/anzahl-der-aldi-maerkte/
+      Chart.defaults.global.elements.point.radius = 11;
+      Chart.defaults.global.elements.line.borderWidth = .7;
+
+      const dataObj = {
+        labels: ["2007", "2009", "2011", "2013", "2015", "2016", "2017"],
+        datasets: [{
+          fill: true,
+          pointStyle: 'star',
+          label: "Aldi-Gruppe",
+          backgroundColor: 'hsla(200,100%,75%,.2)',
+          borderColor: 'hsla(300,100%,25%,.9)',
+          data: [4235, 4300, 4303, 4246, 4197, 4168, 4135]
+        }, {
+          fill: true,
+          pointStyle: 'rect',
+          label: "Aldi Nord",
+          backgroundColor: 'hsla(210,100%,75%,.2)',
+          borderColor: 'hsla(210,100%,25%,.9)',
+          data: [2525, 2525, 2507, 2414, 2339, 2298, 2249]
+        }, {
+          fill: true,
+          pointStyle: 'circle',
+          label: "Aldi Süd",
+          backgroundColor: 'hsla(240,100%,75%,.2)',
+          borderColor: 'hsla(240,100%,25%,.9)',
+          data: [1710, 1775, 1796, 1832, 1858, 1870, 1886]
+        }]
+      }
+
+      new Chart("chart-4", {
+        type: "line",
+        data: dataObj,
+        options: {
+          responsive: true,
+
+          scales: {
+            xAxes: [{
+              display: false
+            }],
+            yAxes: [{
+              display: false
+            }]
+          },
+          legend: {
+            position: 'right',
+            reverse: true,
+            labels: {
+              padding: 24,
+              fontSize: 22
+            }
+          }
+        }
+      });
+    </script>
+  </section>
+
+
+  <footer id="footer">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>JAVASCRIPT Bibliotheken</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One|Roboto" rel="stylesheet" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/style.css" />
+  <link rel="stylesheet" href="http://plottablejs.org/assets/lib/plottable.css" />
+  </script>
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/chartjs.css" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable.css" />
+  <link rel="stylesheet" href="http://onlinemagdeburg.localize.org.ua/webdev/andere-css-seiten/plottable45.css" />
+</head>
+
+<body>
+  <header>
+    <nav id="main-links">
+      <ul>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/index.html">Home</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/canvasjs.html">Canvas.js</a></li>
+        <li><a href="http://onlinemagdeburg.localize.org.ua/webdev/chartjs.html">Chart.js</a></li>
+        <li><a class="current" href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html">Plottable.js</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- arrow back to the chopper -->
+  <a href="http://onlinemagdeburg.localize.org.ua/webdev/plottablejs.html"> <i class="fa fa-long-arrow-left fa-5x "
+      aria-hidden="true"></i></a>
+
+
+
+
+  <!-- Grafik 1  -->
+  <section id="mainstory">
+    <div id="canvas-container-plot4">
+
+      <h1>Tagesplanung</h1>
+      <div>
+        <svg id="example" width="500" height="500" xmlns="http://www.w3.org/2000/svg"></svg>
+      </div>
+
+      <!--<script src="http://plottablejs.org/assets/lib/svgtypewriter.js"></script>-->
+      <script src="http://plottablejs.org/assets/lib/d3.js"></script>
+      <script src="http://plottablejs.org/assets/lib/plottable.js"></script>
+
+      <script>
+        var data = [{
+            "start": "7/8/2019 7:00:00",
+            "end": "7/8/2019 09:15:00",
+            "task": "Prüfungsvorbereitung"
+          },
+          {
+            "start": "7/8/2019 9:15:00",
+            "end": "7/8/2019 12:30:00",
+            "task": "Vorlesungen"
+          },
+          {
+            "start": "7/8/2019 12:30:00",
+            "end": "7/8/2019 13:30:00",
+            "task": "Pause"
+          },
+          {
+            "start": "7/8/2019 13:30:00",
+            "end": "7/8/2019 18:00:00",
+            "task": "Selbststudium"
+          },
+          {
+            "start": "7/8/2019 18:00:00",
+            "end": "7/8/2019 18:30:00",
+            "task": "Pause"
+          },
+          {
+            "start": "7/8/2019 18:30:00",
+            "end": "7/8/2019 22:00:00",
+            "task": "Selbststudium"
+          }
+        ];
+
+        var colorScale = new Plottable.Scales.Color();
+
+        var xScale = new Plottable.Scales.Time();
+        var xAxis = new Plottable.Axes.Time(xScale, "bottom");
+
+        var yScale = new Plottable.Scales.Category();
+        var yAxis = new Plottable.Axes.Category(yScale, "left");
+
+        var plot = new Plottable.Plots.Rectangle()
+          .x(function (d) {
+            return new Date(d.start);
+          }, xScale)
+          .x2(function (d) {
+            return new Date(d.end);
+          })
+          .y(function (d) {
+            return d.task;
+          }, yScale)
+          .attr("fill", function (d) {
+            return d.task;
+          }, colorScale)
+          .addDataset(new Plottable.Dataset(data));
+
+        var chart = new Plottable.Components.Table([
+          [yAxis, plot],
+          [null, xAxis]
+        ]);
+
+        chart.renderTo("svg#example");
+      </script>
+    </div>
+  </section>
+
+
+
+
+  <footer id="footer" class="footer5">
+    <p>Weiterentwickelt mit &hearts; von Benjamin Mewes und Volodymyr Tsisar</p>
+  </footer>
+</body>
+
+</html>
